@@ -1,0 +1,44 @@
+c:\users\alexander inturias\documents\visual studio 2012\Projects\Disciplina\Disciplina\bin\Debug\Disciplina.exe.config
+c:\users\alexander inturias\documents\visual studio 2012\Projects\Disciplina\Disciplina\bin\Debug\Disciplina.exe
+c:\users\alexander inturias\documents\visual studio 2012\Projects\Disciplina\Disciplina\bin\Debug\Disciplina.pdb
+c:\users\alexander inturias\documents\visual studio 2012\Projects\Disciplina\Disciplina\obj\Debug\Disciplina.csprojResolveAssemblyReference.cache
+c:\users\alexander inturias\documents\visual studio 2012\Projects\Disciplina\Disciplina\obj\Debug\Disciplina.Properties.Resources.resources
+c:\users\alexander inturias\documents\visual studio 2012\Projects\Disciplina\Disciplina\obj\Debug\Disciplina.csproj.GenerateResource.Cache
+c:\users\alexander inturias\documents\visual studio 2012\Projects\Disciplina\Disciplina\obj\Debug\Disciplina.exe
+c:\users\alexander inturias\documents\visual studio 2012\Projects\Disciplina\Disciplina\obj\Debug\Disciplina.pdb
+c:\users\alexander inturias\documents\visual studio 2012\Projects\Disciplina\Disciplina\obj\Debug\Disciplina.Login.resources
+c:\users\alexander inturias\documents\visual studio 2012\Projects\Disciplina\Disciplina\bin\Debug\EntityFramework.dll
+c:\users\alexander inturias\documents\visual studio 2012\Projects\Disciplina\Disciplina\bin\Debug\EntityFramework.xml
+c:\users\alexander inturias\documents\visual studio 2012\Projects\Disciplina\Disciplina\obj\Debug\Disciplina.Vistas.Encargado.Principal.resources
+c:\users\alexander inturias\documents\visual studio 2012\Projects\Disciplina\Disciplina\obj\Debug\Disciplina.Vistas.Comunes.Cuentas.resources
+c:\users\alexander inturias\documents\visual studio 2012\Projects\Disciplina\Disciplina\obj\Debug\Disciplina.Vistas.Comunes.RegistrarCuenta.resources
+c:\users\alexander inturias\documents\visual studio 2012\Projects\Disciplina\Disciplina\obj\Debug\Disciplina.Vistas.Oficial.Principal.resources
+c:\users\alexander inturias\documents\visual studio 2012\Projects\Disciplina\Disciplina\obj\Debug\Disciplina.Vistas.Carreras.Registrar.resources
+c:\users\alexander inturias\documents\visual studio 2012\Projects\Disciplina\Disciplina\obj\Debug\Disciplina.Vistas.Carreras.Principal.resources
+c:\users\alexander inturias\documents\visual studio 2012\Projects\Disciplina\Disciplina\obj\Debug\Disciplina.Vistas.Cursos.Principal.resources
+c:\users\alexander inturias\documents\visual studio 2012\Projects\Disciplina\Disciplina\obj\Debug\Disciplina.Vistas.Cursos.Registrar.resources
+C:\Users\Gonzalo\Desktop\Disciplina\Disciplina\bin\Debug\Disciplina.exe.config
+C:\Users\Gonzalo\Desktop\Disciplina\Disciplina\obj\Debug\Disciplina.exe
+C:\Users\Gonzalo\Desktop\Disciplina\Disciplina\obj\Debug\Disciplina.pdb
+C:\Users\Gonzalo\Desktop\Disciplina\Disciplina\bin\Debug\Disciplina.exe
+C:\Users\Gonzalo\Desktop\Disciplina\Disciplina\bin\Debug\Disciplina.pdb
+C:\Users\Gonzalo\Desktop\Disciplina\Disciplina\bin\Debug\EntityFramework.dll
+C:\Users\Gonzalo\Desktop\Disciplina\Disciplina\bin\Debug\EntityFramework.xml
+C:\Users\Gonzalo\Desktop\Disciplina\Disciplina\obj\Debug\Disciplina.csprojResolveAssemblyReference.cache
+C:\Users\Gonzalo\Desktop\Disciplina\Disciplina\obj\Debug\Disciplina.Login.resources
+C:\Users\Gonzalo\Desktop\Disciplina\Disciplina\obj\Debug\Disciplina.Properties.Resources.resources
+C:\Users\Gonzalo\Desktop\Disciplina\Disciplina\obj\Debug\Disciplina.Vistas.Carreras.Principal.resources
+C:\Users\Gonzalo\Desktop\Disciplina\Disciplina\obj\Debug\Disciplina.Vistas.Carreras.Registrar.resources
+C:\Users\Gonzalo\Desktop\Disciplina\Disciplina\obj\Debug\Disciplina.Vistas.Comunes.Cuentas.resources
+C:\Users\Gonzalo\Desktop\Disciplina\Disciplina\obj\Debug\Disciplina.Vistas.Comunes.RegistrarCuenta.resources
+C:\Users\Gonzalo\Desktop\Disciplina\Disciplina\obj\Debug\Disciplina.Vistas.Cursos.Registrar.resources
+C:\Users\Gonzalo\Desktop\Disciplina\Disciplina\obj\Debug\Disciplina.Vistas.Encargado.Principal.resources
+C:\Users\Gonzalo\Desktop\Disciplina\Disciplina\obj\Debug\Disciplina.Vistas.Oficial.Principal.resources
+C:\Users\Gonzalo\Desktop\Disciplina\Disciplina\obj\Debug\Disciplina.Vistas.Cursos.Principal.resources
+C:\Users\Gonzalo\Desktop\Disciplina\Disciplina\obj\Debug\Disciplina.csproj.GenerateResource.Cache
+C:\Users\Gonzalo\Desktop\Disciplina\Disciplina\obj\Debug\Disciplina.Vistas.Estudiantes.Principal.resources
+C:\Users\Gonzalo\Desktop\Disciplina\Disciplina\obj\Debug\Disciplina.Vistas.Estudiantes.Registrar.resources
+C:\Users\Gonzalo\Desktop\Disciplina\Disciplina\obj\Debug\Disciplina.Vistas.Faltas.Registrar.resources
+C:\Users\Gonzalo\Desktop\Disciplina\Disciplina\obj\Debug\Disciplina.Vistas.Faltas.Principal.resources
+C:\Users\Gonzalo\Desktop\Disciplina\Disciplina\obj\Debug\Disciplina.Vistas.Cursos_Estudiantes.Registrar.resources
+C:\Users\Gonzalo\Desktop\Disciplina\Disciplina\obj\Debug\Disciplina.Vistas.Cursos_Estudiantes.Curso.resources
