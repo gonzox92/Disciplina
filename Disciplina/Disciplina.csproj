@@ -59,6 +59,7 @@
     <Compile Include="Controladores\Encargado.cs" />
     <Compile Include="Controladores\Estudiante.cs" />
     <Compile Include="Controladores\Falta.cs" />
+    <Compile Include="Controladores\FaltasEstudiantes.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,6 +139,18 @@
     <Compile Include="Vistas\Estudiantes\Registrar.Designer.cs">
       <DependentUpon>Registrar.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\Faltas-Estudiantes\Faltas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Faltas-Estudiantes\Faltas.Designer.cs">
+      <DependentUpon>Faltas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Faltas-Estudiantes\Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Faltas-Estudiantes\Principal.Designer.cs">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Faltas\Principal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -204,6 +217,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Estudiantes\Registrar.resx">
       <DependentUpon>Registrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Faltas-Estudiantes\Faltas.resx">
+      <DependentUpon>Faltas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Faltas-Estudiantes\Principal.resx">
+      <DependentUpon>Principal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Faltas\Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>

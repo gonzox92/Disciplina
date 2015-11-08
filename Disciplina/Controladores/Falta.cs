@@ -15,9 +15,10 @@ namespace Disciplina.Controladores
             string[] columnas = { 
                 "ID", 
                 "grado AS Grado",
-                "nombre AS Falta"
+                "nombre AS Falta",
+                "puntos AS Puntos"
             };
-            string[] tablas = { "faltas" };
+            string[] tablas = { "faltasRac" };
             Dictionary<string, string[]> filtro = new Dictionary<string, string[]>();
             filtro.Add("1", new string[] { "=", "1", "" });
 
@@ -39,7 +40,7 @@ namespace Disciplina.Controladores
 
         public bool registrar(Modelos.IModelo datos)
         {
-            return Modelos.Consultas.Server.insert("faltas", datos.esquema());
+            return Modelos.Consultas.Server.insert("faltasRac", datos.esquema());
         }
     }
 }

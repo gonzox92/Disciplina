@@ -19,6 +19,7 @@ namespace Disciplina.Vistas.Encargado
         private Controladores.Estudiante estudiante;
         private Controladores.Falta falta;
         private Controladores.CursoEstudiantes cursoEstudiante;
+        private Controladores.FaltasEstudiantes faltasEstudiante;
 
         public Principal()
         {
@@ -30,6 +31,7 @@ namespace Disciplina.Vistas.Encargado
             this.estudiante = new Controladores.Estudiante();
             this.falta = new Controladores.Falta();
             this.cursoEstudiante = new Controladores.CursoEstudiantes();
+            this.faltasEstudiante = new Controladores.FaltasEstudiantes();
         }
 
         private void btnAdminCuentas_Click(object sender, EventArgs e)
@@ -60,6 +62,11 @@ namespace Disciplina.Vistas.Encargado
         private void btnCursosEstudiantes_Click(object sender, EventArgs e)
         {
             this.cursoEstudiante.registrar();
+        }
+
+        private void btnEstudiantesFaltas_Click(object sender, EventArgs e)
+        {
+            this.faltasEstudiante.principal();
         }
     }
 }

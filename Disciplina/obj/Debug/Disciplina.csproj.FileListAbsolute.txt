@@ -42,3 +42,5 @@ C:\Users\Gonzalo\Desktop\Disciplina\Disciplina\obj\Debug\Disciplina.Vistas.Falta
 C:\Users\Gonzalo\Desktop\Disciplina\Disciplina\obj\Debug\Disciplina.Vistas.Faltas.Principal.resources
 C:\Users\Gonzalo\Desktop\Disciplina\Disciplina\obj\Debug\Disciplina.Vistas.Cursos_Estudiantes.Curso.resources
 C:\Users\Gonzalo\Desktop\Disciplina\Disciplina\obj\Debug\Disciplina.Vistas.Estudiantes.Buscar.resources
+C:\Users\Gonzalo\Desktop\Disciplina\Disciplina\obj\Debug\Disciplina.Vistas.Faltas_Estudiantes.Principal.resources
+C:\Users\Gonzalo\Desktop\Disciplina\Disciplina\obj\Debug\Disciplina.Vistas.Faltas_Estudiantes.Faltas.resources

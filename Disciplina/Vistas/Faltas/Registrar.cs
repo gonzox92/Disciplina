@@ -27,7 +27,7 @@ namespace Disciplina.Vistas.Faltas
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            Modelos.IModelo falta = new Modelos.Falta(this.txtGrado.Text, this.txtFalta.Text);
+            Modelos.IModelo falta = new Modelos.Falta(this.txtGrado.Text, this.txtFalta.Text, this.txtPuntos.Text);
 
             if (controller.registrar(falta))
             {
