@@ -362,6 +362,7 @@
             // 
             // txtCarrera
             // 
+            this.txtCarrera.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.txtCarrera.FormattingEnabled = true;
             this.txtCarrera.Location = new System.Drawing.Point(70, 90);
             this.txtCarrera.Name = "txtCarrera";

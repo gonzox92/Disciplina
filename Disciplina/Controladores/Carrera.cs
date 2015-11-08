@@ -19,6 +19,7 @@ namespace Disciplina.Controladores
             string[] tablas = { "carreras" };
             Dictionary<string, string[]> filtro = new Dictionary<string, string[]>();
             filtro.Add("1", new string[] { "=", "1", "" });
+            filtro.Add("ORDER BY ", new string[] { "nombre", "ASC", "" });
 
             return Modelos.Consultas.Server.select(columnas, tablas, filtro);
         }

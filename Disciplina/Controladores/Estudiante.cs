@@ -54,5 +54,13 @@ namespace Disciplina.Controladores
         {
             return Modelos.Consultas.Server.insert("estudiantes", datos.esquema());
         }
+
+        public List<DataGridViewRow> buscar()
+        {
+            DataTable estudiantes = this.getEstudiantes();
+            Vistas.Estudiantes.Buscar vista = new Vistas.Estudiantes.Buscar(estudiantes);
+            vista.ShowDialog();
+            return vista.estudiantesSeleccionados;
+        }
     }
 }

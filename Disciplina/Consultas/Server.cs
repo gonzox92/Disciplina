@@ -96,7 +96,29 @@ namespace Disciplina.Modelos.Consultas
             }
             catch (SqlException e)
             {
-                MessageBox.Show(e.ToString());
+                MessageBox.Show(string.Format("SELECT {0} FROM {1} WHERE {2}", columnas, tablas, valores));
+                return null;
+            }
+        }
+
+        public static DataTable selectDistinct(String[] listaColumnas, String[] listaTablas, Dictionary<string, String[]> datos)
+        {
+            string columnas = getTablas(listaColumnas);
+            string tablas = getTablas(listaTablas);
+            string valores = getValoresComparaciones(datos);
+
+            SqlCommand commmand = new SqlCommand(string.Format("SELECT DISTINCT {0} FROM {1} WHERE {2}", columnas, tablas, valores), Configuracion.Conexion.conn);
+
+            try
+            {
+                //MessageBox.Show(string.Format("SELECT {0} FROM {1} WHERE {2}", columnas, tablas, valores));
+                DataTable tabla = new DataTable();
+                tabla.Load(commmand.ExecuteReader());
+                return tabla;
+            }
+            catch (SqlException e)
+            {
+                MessageBox.Show(string.Format("SELECT {0} FROM {1} WHERE {2}", columnas, tablas, valores));
                 return null;
             }
         }

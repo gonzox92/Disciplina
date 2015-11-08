@@ -167,6 +167,7 @@
             // 
             // txtGrado
             // 
+            this.txtGrado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.txtGrado.FormattingEnabled = true;
             this.txtGrado.Items.AddRange(new object[] {
             "I",

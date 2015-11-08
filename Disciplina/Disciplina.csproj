@@ -67,6 +67,7 @@
     </Compile>
     <Compile Include="Consultas\Server.cs" />
     <Compile Include="Modelos\Carrera.cs" />
+    <Compile Include="Modelos\CursoEstudiante.cs" />
     <Compile Include="Modelos\Estudiante.cs" />
     <Compile Include="Modelos\Falta.cs" />
     <Compile Include="Modelos\IModelo.cs" />
@@ -107,12 +108,6 @@
     <Compile Include="Vistas\Cursos-Estudiantes\Curso.Designer.cs">
       <DependentUpon>Curso.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\Cursos-Estudiantes\Registrar.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vistas\Cursos-Estudiantes\Registrar.Designer.cs">
-      <DependentUpon>Registrar.cs</DependentUpon>
-    </Compile>
     <Compile Include="Vistas\Cursos\Registrar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,6 +119,12 @@
     </Compile>
     <Compile Include="Vistas\Encargado\Principal.Designer.cs">
       <DependentUpon>Principal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Estudiantes\Buscar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Estudiantes\Buscar.Designer.cs">
+      <DependentUpon>Buscar.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Estudiantes\Principal.cs">
       <SubType>Form</SubType>
@@ -189,14 +190,14 @@
     <EmbeddedResource Include="Vistas\Cursos-Estudiantes\Curso.resx">
       <DependentUpon>Curso.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\Cursos-Estudiantes\Registrar.resx">
-      <DependentUpon>Registrar.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Cursos\Registrar.resx">
       <DependentUpon>Registrar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Encargado\Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Estudiantes\Buscar.resx">
+      <DependentUpon>Buscar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Estudiantes\Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>

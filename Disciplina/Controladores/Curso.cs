@@ -34,6 +34,29 @@ namespace Disciplina.Controladores
             return Modelos.Consultas.Server.select(columnas, tablas, filtro);
         }
 
+        public Dictionary<string, string> getCursos(string year, string periodo, string carrera)
+        {
+            string[] columnas = { 
+                "ID",
+                "(curso + ' ' + paralelo) AS curso",
+            };
+            string[] tablas = { "cursos" };
+            Dictionary<string, string[]> filtro = new Dictionary<string, string[]>();
+            filtro.Add("IDCarrera", new string[] { "=", carrera, "AND" });
+            filtro.Add("year", new string[] { "=", year, "AND" });
+            filtro.Add("periodo", new string[] { "=", string.Format("'{0}'", periodo), "" });
+
+            DataTable cursosTable = Modelos.Consultas.Server.selectDistinct(columnas, tablas, filtro);
+            Dictionary<string, string> cursos = new Dictionary<string, string>();
+
+            foreach (DataRow fila in cursosTable.Rows)
+            {
+                cursos.Add(fila["ID"].ToString(), fila["curso"].ToString());
+            }
+
+            return cursos;
+        }
+
         public void cursos()
         {
             DataTable cursos = this.getCursos();

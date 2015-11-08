@@ -31,48 +31,152 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Curso));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.labelResultados = new System.Windows.Forms.Label();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnRegistrar = new System.Windows.Forms.Button();
+            this.txtYear = new System.Windows.Forms.NumericUpDown();
+            this.txtCurso = new System.Windows.Forms.ComboBox();
+            this.txtPeriodo = new System.Windows.Forms.ComboBox();
+            this.txtCarrera = new System.Windows.Forms.ComboBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataCarreras = new System.Windows.Forms.DataGridView();
+            this.tableEstudiantes = new System.Windows.Forms.DataGridView();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtYear)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataCarreras)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tableEstudiantes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.comboBox3);
-            this.groupBox1.Controls.Add(this.comboBox2);
-            this.groupBox1.Controls.Add(this.comboBox1);
-            this.groupBox1.Controls.Add(this.numericUpDown1);
+            this.groupBox1.Controls.Add(this.labelResultados);
+            this.groupBox1.Controls.Add(this.btnEliminar);
+            this.groupBox1.Controls.Add(this.btnRegistrar);
+            this.groupBox1.Controls.Add(this.txtYear);
+            this.groupBox1.Controls.Add(this.txtCurso);
+            this.groupBox1.Controls.Add(this.txtPeriodo);
+            this.groupBox1.Controls.Add(this.txtCarrera);
             this.groupBox1.Controls.Add(this.pictureBox4);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.pictureBox2);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.dataCarreras);
+            this.groupBox1.Controls.Add(this.tableEstudiantes);
             this.groupBox1.Controls.Add(this.pictureBox3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(25, 66);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(921, 476);
+            this.groupBox1.Size = new System.Drawing.Size(1234, 458);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            // 
+            // labelResultados
+            // 
+            this.labelResultados.AutoSize = true;
+            this.labelResultados.Location = new System.Drawing.Point(52, 265);
+            this.labelResultados.Name = "labelResultados";
+            this.labelResultados.Size = new System.Drawing.Size(153, 13);
+            this.labelResultados.TabIndex = 34;
+            this.labelResultados.Text = "* No se encontraron resultados";
+            this.labelResultados.Visible = false;
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
+            this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEliminar.Location = new System.Drawing.Point(848, 394);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(111, 36);
+            this.btnEliminar.TabIndex = 33;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // btnRegistrar
+            // 
+            this.btnRegistrar.Image = ((System.Drawing.Image)(resources.GetObject("btnRegistrar.Image")));
+            this.btnRegistrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRegistrar.Location = new System.Drawing.Point(725, 394);
+            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRegistrar.Name = "btnRegistrar";
+            this.btnRegistrar.Size = new System.Drawing.Size(110, 36);
+            this.btnRegistrar.TabIndex = 32;
+            this.btnRegistrar.Text = "Registrar";
+            this.btnRegistrar.UseVisualStyleBackColor = true;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
+            // 
+            // txtYear
+            // 
+            this.txtYear.Location = new System.Drawing.Point(57, 44);
+            this.txtYear.Margin = new System.Windows.Forms.Padding(2);
+            this.txtYear.Maximum = new decimal(new int[] {
+            3000,
+            0,
+            0,
+            0});
+            this.txtYear.Minimum = new decimal(new int[] {
+            1990,
+            0,
+            0,
+            0});
+            this.txtYear.Name = "txtYear";
+            this.txtYear.ReadOnly = true;
+            this.txtYear.Size = new System.Drawing.Size(320, 20);
+            this.txtYear.TabIndex = 31;
+            this.txtYear.Value = new decimal(new int[] {
+            1990,
+            0,
+            0,
+            0});
+            this.txtYear.ValueChanged += new System.EventHandler(this.txtYear_ValueChanged);
+            // 
+            // txtCurso
+            // 
+            this.txtCurso.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txtCurso.FormattingEnabled = true;
+            this.txtCurso.Location = new System.Drawing.Point(56, 241);
+            this.txtCurso.Name = "txtCurso";
+            this.txtCurso.Size = new System.Drawing.Size(322, 21);
+            this.txtCurso.TabIndex = 30;
+            this.txtCurso.SelectedIndexChanged += new System.EventHandler(this.txtCurso_SelectedIndexChanged);
+            // 
+            // txtPeriodo
+            // 
+            this.txtPeriodo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txtPeriodo.FormattingEnabled = true;
+            this.txtPeriodo.Items.AddRange(new object[] {
+            "I",
+            "II"});
+            this.txtPeriodo.Location = new System.Drawing.Point(55, 173);
+            this.txtPeriodo.Name = "txtPeriodo";
+            this.txtPeriodo.Size = new System.Drawing.Size(322, 21);
+            this.txtPeriodo.TabIndex = 29;
+            this.txtPeriodo.SelectedIndexChanged += new System.EventHandler(this.txtPeriodo_SelectedIndexChanged);
+            // 
+            // txtCarrera
+            // 
+            this.txtCarrera.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txtCarrera.FormattingEnabled = true;
+            this.txtCarrera.Location = new System.Drawing.Point(56, 106);
+            this.txtCarrera.Name = "txtCarrera";
+            this.txtCarrera.Size = new System.Drawing.Size(322, 21);
+            this.txtCarrera.TabIndex = 28;
+            this.txtCarrera.SelectedIndexChanged += new System.EventHandler(this.txtCarrera_SelectedIndexChanged);
             // 
             // pictureBox4
             // 
@@ -137,14 +241,14 @@
             this.label1.TabIndex = 19;
             this.label1.Text = "Carrera";
             // 
-            // dataCarreras
+            // tableEstudiantes
             // 
-            this.dataCarreras.AllowUserToAddRows = false;
-            this.dataCarreras.AllowUserToDeleteRows = false;
-            this.dataCarreras.AllowUserToResizeColumns = false;
-            this.dataCarreras.AllowUserToResizeRows = false;
-            this.dataCarreras.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataCarreras.BackgroundColor = System.Drawing.Color.White;
+            this.tableEstudiantes.AllowUserToAddRows = false;
+            this.tableEstudiantes.AllowUserToDeleteRows = false;
+            this.tableEstudiantes.AllowUserToResizeColumns = false;
+            this.tableEstudiantes.AllowUserToResizeRows = false;
+            this.tableEstudiantes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.tableEstudiantes.BackgroundColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -152,18 +256,18 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataCarreras.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataCarreras.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataCarreras.GridColor = System.Drawing.Color.White;
-            this.dataCarreras.Location = new System.Drawing.Point(243, 30);
-            this.dataCarreras.Margin = new System.Windows.Forms.Padding(2);
-            this.dataCarreras.Name = "dataCarreras";
-            this.dataCarreras.ReadOnly = true;
-            this.dataCarreras.RowHeadersVisible = false;
-            this.dataCarreras.RowTemplate.Height = 24;
-            this.dataCarreras.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataCarreras.Size = new System.Drawing.Size(640, 410);
-            this.dataCarreras.TabIndex = 18;
+            this.tableEstudiantes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.tableEstudiantes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tableEstudiantes.GridColor = System.Drawing.Color.White;
+            this.tableEstudiantes.Location = new System.Drawing.Point(450, 28);
+            this.tableEstudiantes.Margin = new System.Windows.Forms.Padding(2);
+            this.tableEstudiantes.Name = "tableEstudiantes";
+            this.tableEstudiantes.ReadOnly = true;
+            this.tableEstudiantes.RowHeadersVisible = false;
+            this.tableEstudiantes.RowTemplate.Height = 24;
+            this.tableEstudiantes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.tableEstudiantes.Size = new System.Drawing.Size(759, 351);
+            this.tableEstudiantes.TabIndex = 18;
             // 
             // pictureBox3
             // 
@@ -186,43 +290,44 @@
             this.label2.TabIndex = 15;
             this.label2.Text = "Año";
             // 
-            // numericUpDown1
+            // panel2
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(57, 43);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(168, 20);
-            this.numericUpDown1.TabIndex = 27;
+            this.panel2.BackColor = System.Drawing.Color.Gold;
+            this.panel2.Location = new System.Drawing.Point(637, 614);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(644, 13);
+            this.panel2.TabIndex = 19;
             // 
-            // comboBox1
+            // panel1
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(56, 106);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(169, 21);
-            this.comboBox1.TabIndex = 28;
+            this.panel1.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.panel1.Location = new System.Drawing.Point(-6, 614);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(650, 13);
+            this.panel1.TabIndex = 18;
             // 
-            // comboBox2
+            // pictureBox5
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(55, 173);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(169, 21);
-            this.comboBox2.TabIndex = 29;
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(56, 241);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(169, 21);
-            this.comboBox3.TabIndex = 30;
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(1150, 11);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(110, 46);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 20;
+            this.pictureBox5.TabStop = false;
             // 
             // Curso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(987, 621);
+            this.ClientSize = new System.Drawing.Size(1271, 621);
+            this.Controls.Add(this.pictureBox5);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -230,14 +335,16 @@
             this.MinimizeBox = false;
             this.Name = "Curso";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.Curso_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtYear)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataCarreras)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tableEstudiantes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -253,10 +360,16 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataCarreras;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.DataGridView tableEstudiantes;
+        private System.Windows.Forms.ComboBox txtCurso;
+        private System.Windows.Forms.ComboBox txtPeriodo;
+        private System.Windows.Forms.ComboBox txtCarrera;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.NumericUpDown txtYear;
+        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button btnRegistrar;
+        private System.Windows.Forms.Label labelResultados;
     }
 }
