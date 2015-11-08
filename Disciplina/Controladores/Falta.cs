@@ -32,6 +32,14 @@ namespace Disciplina.Controladores
             this.resolver(vista);
         }
 
+        public Dictionary<string, string> buscar()
+        {
+            DataTable faltas = this.getFaltas();
+            Vistas.Faltas.Buscar vista = new Vistas.Faltas.Buscar(faltas);
+            vista.ShowDialog();
+            return vista.faltaSeleccionada;
+        }
+
         public void registrar()
         {
             Form vista = new Vistas.Faltas.Registrar();

@@ -12,9 +12,47 @@ namespace Disciplina.Vistas.Faltas
 {
     public partial class Buscar : Form
     {
-        public Buscar()
+        private Controladores.Falta controller;
+        private DataTable faltas;
+        public Dictionary<string, string> faltaSeleccionada;
+
+        public Buscar(DataTable faltas)
         {
             InitializeComponent();
+            this.controller = new Controladores.Falta();
+            this.faltas = faltas;
+            this.faltaSeleccionada = new Dictionary<string, string>();
+            this.faltaSeleccionada.Add("IDFalta", "");
+            this.faltaSeleccionada.Add("Falta", "");
+            this.faltaSeleccionada.Add("Puntos", "");
+        }
+
+        private void Buscar_Load(object sender, EventArgs e)
+        {
+            this.dataFaltas.DataSource = this.faltas;
+        }
+
+        private void seleccionarFalta()
+        {
+            if (this.dataFaltas.SelectedRows.Count == 0)
+            {
+                return;
+            }
+            DataGridViewRow seleccionado = this.dataFaltas.SelectedRows[0];
+            this.faltaSeleccionada["IDFalta"] = seleccionado.Cells[0].Value.ToString();
+            this.faltaSeleccionada["Falta"] = seleccionado.Cells[2].Value.ToString();
+            this.faltaSeleccionada["Puntos"] = seleccionado.Cells[3].Value.ToString();
+            this.Close();
+        }
+
+        private void btnSeleccionar_Click(object sender, EventArgs e)
+        {
+            this.seleccionarFalta();
+        }
+
+        private void dataFaltas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            this.seleccionarFalta();
         }
     }
 }

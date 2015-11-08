@@ -39,6 +39,23 @@ namespace Disciplina.Controladores
             return Modelos.Consultas.Server.select(columnas, tablas, filtro);
         }
 
+        public DataTable getFaltasEstudiante(string idEstudiante, string idCurso)
+        {
+            string[] columnas = { 
+                "REPLACE(CONVERT(VARCHAR(11),FE.fecha,103), ' ','/') AS Fecha",
+                "FE.concepto AS Concepto",
+                "FE.detalleConcepto AS Detalle",
+                "FE.puntos AS Puntos"
+            };
+            string[] tablas = {"faltasEstudiantes AS FE" };
+            Dictionary<string, string[]> filtro = new Dictionary<string, string[]>();
+            filtro.Add("FE.IDEstudiante", new string[] { "=", idEstudiante, "AND" });
+            filtro.Add("FE.IDCurso", new string[] { "=", idCurso, "" });
+
+
+            return Modelos.Consultas.Server.select(columnas, tablas, filtro);
+        }
+
         public void principal()
         {
             DataTable carrerasTable = this.carrera.getCarreras();
@@ -59,6 +76,17 @@ namespace Disciplina.Controladores
 
             Form vista = new Vistas.Faltas_Estudiantes.Faltas(detalleEstudiante);
             this.resolver(vista);
+        }
+
+        public void registrarFalta(string idEstudiante, string idCurso)
+        {
+            Form vista = new Vistas.Faltas_Estudiantes.Registrar(idEstudiante, idCurso);
+            this.resolver(vista);
+        }
+
+        public bool registrar(Modelos.IModelo datos)
+        {
+            return Modelos.Consultas.Server.insert("faltasEstudiantes", datos.esquema());
         }
     }
 }

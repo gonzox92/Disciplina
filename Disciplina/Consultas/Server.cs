@@ -75,6 +75,7 @@ namespace Disciplina.Modelos.Consultas
             }
             catch (SqlException e)
             {
+                //MessageBox.Show(e.ToString());
                 MessageBox.Show(string.Format("INSERT INTO {0} ({1}) VALUES ({2})", tabla, columnas, valores));
                 return false;
             }

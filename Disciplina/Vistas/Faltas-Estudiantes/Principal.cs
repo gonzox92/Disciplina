@@ -89,6 +89,11 @@ namespace Disciplina.Vistas.Faltas_Estudiantes
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
+            if (this.tableEstudiantes.SelectedRows.Count == 0)
+            {
+                return;
+            }
+
             string idEstudiante = this.tableEstudiantes.SelectedRows[0].Cells[0].Value.ToString();
             string idCurso = ((KeyValuePair<string, string>)this.txtCurso.SelectedItem).Key;
 

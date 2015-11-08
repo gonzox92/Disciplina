@@ -71,6 +71,7 @@
     <Compile Include="Modelos\CursoEstudiante.cs" />
     <Compile Include="Modelos\Estudiante.cs" />
     <Compile Include="Modelos\Falta.cs" />
+    <Compile Include="Modelos\FaltaEstudiante.cs" />
     <Compile Include="Modelos\IModelo.cs" />
     <Compile Include="Modelos\Login.cs" />
     <Compile Include="Modelos\Oficial.cs" />
@@ -151,6 +152,18 @@
     <Compile Include="Vistas\Faltas-Estudiantes\Principal.Designer.cs">
       <DependentUpon>Principal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\Faltas-Estudiantes\Registrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Faltas-Estudiantes\Registrar.Designer.cs">
+      <DependentUpon>Registrar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Faltas\Buscar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Faltas\Buscar.Designer.cs">
+      <DependentUpon>Buscar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Faltas\Principal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -223,6 +236,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Faltas-Estudiantes\Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Faltas-Estudiantes\Registrar.resx">
+      <DependentUpon>Registrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Faltas\Buscar.resx">
+      <DependentUpon>Buscar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Faltas\Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>
