@@ -53,9 +53,9 @@
             this.groupBox1.Controls.Add(this.btnRegistrar);
             this.groupBox1.Controls.Add(this.dataSemestres);
             this.groupBox1.Location = new System.Drawing.Point(13, 79);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(940, 519);
             this.groupBox1.TabIndex = 18;
             this.groupBox1.TabStop = false;
@@ -65,19 +65,20 @@
             this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEliminar.Location = new System.Drawing.Point(575, 463);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(124, 36);
             this.btnEliminar.TabIndex = 6;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnModificar
             // 
             this.btnModificar.Image = ((System.Drawing.Image)(resources.GetObject("btnModificar.Image")));
             this.btnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnModificar.Location = new System.Drawing.Point(424, 463);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(2);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(124, 36);
             this.btnModificar.TabIndex = 5;
@@ -89,7 +90,7 @@
             this.btnRegistrar.Image = ((System.Drawing.Image)(resources.GetObject("btnRegistrar.Image")));
             this.btnRegistrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRegistrar.Location = new System.Drawing.Point(285, 463);
-            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(2);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(110, 36);
             this.btnRegistrar.TabIndex = 4;
@@ -116,7 +117,7 @@
             this.dataSemestres.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataSemestres.GridColor = System.Drawing.Color.White;
             this.dataSemestres.Location = new System.Drawing.Point(16, 28);
-            this.dataSemestres.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataSemestres.Margin = new System.Windows.Forms.Padding(2);
             this.dataSemestres.Name = "dataSemestres";
             this.dataSemestres.ReadOnly = true;
             this.dataSemestres.RowHeadersVisible = false;
@@ -129,7 +130,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.Gold;
             this.panel2.Location = new System.Drawing.Point(481, 632);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(488, 13);
             this.panel2.TabIndex = 17;
@@ -138,7 +139,7 @@
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.HotTrack;
             this.panel1.Location = new System.Drawing.Point(-3, 632);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(488, 13);
             this.panel1.TabIndex = 16;
@@ -147,7 +148,7 @@
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(16, 10);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(44, 46);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -158,7 +159,7 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(854, 11);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(110, 46);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -191,7 +192,7 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Principal";

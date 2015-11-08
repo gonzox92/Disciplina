@@ -41,7 +41,8 @@ namespace Disciplina.Controladores
 
         public DataTable getFaltasEstudiante(string idEstudiante, string idCurso)
         {
-            string[] columnas = { 
+            string[] columnas = {
+                "FE.ID",
                 "REPLACE(CONVERT(VARCHAR(11),FE.fecha,103), ' ','/') AS Fecha",
                 "FE.concepto AS Concepto",
                 "FE.detalleConcepto AS Detalle",
@@ -87,6 +88,14 @@ namespace Disciplina.Controladores
         public bool registrar(Modelos.IModelo datos)
         {
             return Modelos.Consultas.Server.insert("faltasEstudiantes", datos.esquema());
+        }
+
+        public bool eliminar(string idFaltaEstudiante)
+        {
+            Dictionary<string, String[]> datos = new Dictionary<string, String[]>();
+            datos.Add("ID", new string[] { "=", idFaltaEstudiante, "" });
+
+            return Modelos.Consultas.Server.delete("faltasEstudiantes", datos);
         }
     }
 }

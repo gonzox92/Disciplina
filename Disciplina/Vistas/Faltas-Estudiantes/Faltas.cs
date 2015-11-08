@@ -33,6 +33,8 @@ namespace Disciplina.Vistas.Faltas_Estudiantes
                 this.detalleEstudiante["IDCurso"]);
             this.tableFaltas.DataSource = faltas;
 
+            this.totalPuntos = 0;
+
             foreach(DataRow falta in faltas.Rows)
             {
                 if (falta["Concepto"].ToString() == "Demerito")
@@ -66,6 +68,23 @@ namespace Disciplina.Vistas.Faltas_Estudiantes
         {
             this.faltasEstudiante.registrarFalta(this.detalleEstudiante["IDEstudiante"], this.detalleEstudiante["IDCurso"]);
             this.loadFaltas();
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (this.tableFaltas.SelectedRows.Count == 0)
+            {
+                return;
+            }
+            if (MessageBox.Show("Desea eliminar el registro de faltas", "Eliminar", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                foreach (DataGridViewRow row in this.tableFaltas.SelectedRows)
+                {
+                    this.faltasEstudiante.eliminar(row.Cells[0].Value.ToString());
+                }
+
+                this.loadFaltas();
+            }
         }
     }
 }

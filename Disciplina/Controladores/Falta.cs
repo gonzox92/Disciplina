@@ -50,5 +50,13 @@ namespace Disciplina.Controladores
         {
             return Modelos.Consultas.Server.insert("faltasRac", datos.esquema());
         }
+
+        public bool eliminar(string idFalta)
+        {
+            Dictionary<string, String[]> datos = new Dictionary<string, String[]>();
+            datos.Add("ID", new string[] { "=", idFalta, "" });
+
+            return Modelos.Consultas.Server.delete("faltasRac", datos);
+        }
     }
 }

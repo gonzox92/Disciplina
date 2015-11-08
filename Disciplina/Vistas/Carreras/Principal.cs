@@ -33,5 +33,22 @@ namespace Disciplina.Vistas.Carreras
         {
             this.dataCarreras.DataSource = this.carreras;
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (this.dataCarreras.SelectedRows.Count == 0)
+            {
+                return;
+            }
+            if (MessageBox.Show("Desea eliminar la(s) carrera(s) seleccionada(s)?", "Eliminar", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                foreach (DataGridViewRow row in this.dataCarreras.SelectedRows)
+                {
+                    this.controller.eliminar(row.Cells[0].Value.ToString());
+                }
+
+                this.dataCarreras.DataSource = this.controller.getCarreras();
+            }
+        }
     }
 }

@@ -33,5 +33,22 @@ namespace Disciplina.Vistas.Cursos
         {
             this.dataSemestres.DataSource = this.cursos;
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (this.dataSemestres.SelectedRows.Count == 0)
+            {
+                return;
+            }
+            if (MessageBox.Show("Desea eliminar los cursos seleccionados?", "Eliminar", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                foreach (DataGridViewRow row in this.dataSemestres.SelectedRows)
+                {
+                    this.controller.eliminar(row.Cells[0].Value.ToString());
+                }
+
+                this.dataSemestres.DataSource = this.controller.getCursos();
+            }
+        }
     }
 }

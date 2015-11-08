@@ -87,7 +87,7 @@ namespace Disciplina.Vistas.Faltas_Estudiantes
             this.tableEstudiantes.DataSource = estudiantes;
         }
 
-        private void btnRegistrar_Click(object sender, EventArgs e)
+        private void mostrarAlumno()
         {
             if (this.tableEstudiantes.SelectedRows.Count == 0)
             {
@@ -98,6 +98,16 @@ namespace Disciplina.Vistas.Faltas_Estudiantes
             string idCurso = ((KeyValuePair<string, string>)this.txtCurso.SelectedItem).Key;
 
             this.faltas.detalleFaltas(idEstudiante, idCurso);
+        }
+
+        private void btnRegistrar_Click(object sender, EventArgs e)
+        {
+            this.mostrarAlumno();
+        }
+
+        private void tableEstudiantes_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            this.mostrarAlumno();
         }
     }
 }

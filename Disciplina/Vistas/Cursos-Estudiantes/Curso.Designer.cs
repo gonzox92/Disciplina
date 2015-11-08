@@ -50,6 +50,8 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtYear)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -58,6 +60,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.tableEstudiantes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -80,7 +83,7 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(25, 66);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1234, 458);
+            this.groupBox1.Size = new System.Drawing.Size(1234, 522);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
@@ -98,7 +101,7 @@
             // 
             this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(848, 394);
+            this.btnEliminar.Location = new System.Drawing.Point(832, 463);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(111, 36);
@@ -111,7 +114,7 @@
             // 
             this.btnRegistrar.Image = ((System.Drawing.Image)(resources.GetObject("btnRegistrar.Image")));
             this.btnRegistrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRegistrar.Location = new System.Drawing.Point(725, 394);
+            this.btnRegistrar.Location = new System.Drawing.Point(709, 463);
             this.btnRegistrar.Margin = new System.Windows.Forms.Padding(2);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(110, 36);
@@ -266,7 +269,7 @@
             this.tableEstudiantes.RowHeadersVisible = false;
             this.tableEstudiantes.RowTemplate.Height = 24;
             this.tableEstudiantes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.tableEstudiantes.Size = new System.Drawing.Size(759, 351);
+            this.tableEstudiantes.Size = new System.Drawing.Size(759, 416);
             this.tableEstudiantes.TabIndex = 18;
             // 
             // pictureBox3
@@ -319,12 +322,37 @@
             this.pictureBox5.TabIndex = 20;
             this.pictureBox5.TabStop = false;
             // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(28, 12);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(44, 46);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 22;
+            this.pictureBox6.TabStop = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label5.Location = new System.Drawing.Point(76, 23);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(65, 20);
+            this.label5.TabIndex = 21;
+            this.label5.Text = "Cursos";
+            // 
             // Curso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1271, 621);
+            this.Controls.Add(this.pictureBox6);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -345,7 +373,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.tableEstudiantes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -371,5 +401,7 @@
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnRegistrar;
         private System.Windows.Forms.Label labelResultados;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.Label label5;
     }
 }

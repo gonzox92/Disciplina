@@ -101,5 +101,13 @@ namespace Disciplina.Controladores
             vista.ShowDialog();
             return vista.estudiantesSeleccionados;
         }
+
+        public bool eliminar(string id)
+        {
+            Dictionary<string, String[]> datos = new Dictionary<string, String[]>();
+            datos.Add("ID", new string[] { "=", id, "" });
+
+            return Modelos.Consultas.Server.delete("estudiantes", datos);
+        }
     }
 }

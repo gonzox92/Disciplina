@@ -21,6 +21,7 @@ namespace Disciplina
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Vistas.Encargado.Principal());
+            //Application.Run(new Login());
             Configuracion.Conexion.close();
         }
     }

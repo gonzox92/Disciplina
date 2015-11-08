@@ -49,6 +49,8 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnRegistrar = new System.Windows.Forms.Button();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtYear)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -57,6 +59,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox5
@@ -152,7 +155,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Gold;
-            this.panel2.Location = new System.Drawing.Point(630, 549);
+            this.panel2.Location = new System.Drawing.Point(630, 604);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(644, 13);
@@ -225,8 +228,9 @@
             this.tableEstudiantes.RowHeadersVisible = false;
             this.tableEstudiantes.RowTemplate.Height = 24;
             this.tableEstudiantes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.tableEstudiantes.Size = new System.Drawing.Size(759, 351);
+            this.tableEstudiantes.Size = new System.Drawing.Size(759, 406);
             this.tableEstudiantes.TabIndex = 18;
+            this.tableEstudiantes.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tableEstudiantes_CellDoubleClick);
             // 
             // pictureBox3
             // 
@@ -252,7 +256,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.panel1.Location = new System.Drawing.Point(-13, 549);
+            this.panel1.Location = new System.Drawing.Point(-13, 604);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(650, 13);
@@ -288,7 +292,7 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(9, 66);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1234, 458);
+            this.groupBox1.Size = new System.Drawing.Size(1234, 514);
             this.groupBox1.TabIndex = 21;
             this.groupBox1.TabStop = false;
             // 
@@ -296,7 +300,7 @@
             // 
             this.btnRegistrar.Image = ((System.Drawing.Image)(resources.GetObject("btnRegistrar.Image")));
             this.btnRegistrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRegistrar.Location = new System.Drawing.Point(722, 394);
+            this.btnRegistrar.Location = new System.Drawing.Point(722, 453);
             this.btnRegistrar.Margin = new System.Windows.Forms.Padding(2);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(225, 36);
@@ -305,12 +309,37 @@
             this.btnRegistrar.UseVisualStyleBackColor = true;
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(12, 9);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(44, 46);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 26;
+            this.pictureBox6.TabStop = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label5.Location = new System.Drawing.Point(60, 20);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(65, 20);
+            this.label5.TabIndex = 25;
+            this.label5.Text = "Cursos";
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1257, 554);
+            this.ClientSize = new System.Drawing.Size(1257, 611);
+            this.Controls.Add(this.pictureBox6);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -330,7 +359,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -355,5 +386,7 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnRegistrar;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.Label label5;
     }
 }
