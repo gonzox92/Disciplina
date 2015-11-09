@@ -67,6 +67,37 @@ namespace Disciplina.Controladores
             return datos;
         }
 
+        public Dictionary<string, string> getCursosEstudiante(string idEstudiante)
+        {
+            Dictionary<string, string> cursos = new Dictionary<string, string>();
+            Dictionary<string, string> datos = new Dictionary<string, string>();
+
+            string[] columnas = {
+                "C.ID",
+                "(C.curso+' '+C.paralelo) AS curso",
+                "C.year",
+                "CR.nombre",
+                "C.periodo"
+            };
+            string[] tablas = { "estudiantes AS E", "carreras AS CR", "cursos AS C", "cursoEstudiantes AS CE" };
+            Dictionary<string, string[]> filtro = new Dictionary<string, string[]>();
+            filtro.Add("E.ID", new string[] { "=", "CE.IDEstudiante", "AND" });
+            filtro.Add("C.ID", new string[] { "=", "CE.IDCurso", "AND" });
+            filtro.Add("C.IDCarrera", new string[] { "=", "CR.ID", "AND" });
+            filtro.Add(" E.ID", new string[] { "=", idEstudiante, "" });
+
+            DataTable consulta = Modelos.Consultas.Server.selectDistinct(columnas, tablas, filtro);
+
+            foreach (DataRow curso in consulta.Rows)
+            {
+                cursos.Add(curso["ID"].ToString(), 
+                    string.Format("{0} - {1}/{2}/{3}",
+                        curso["curso"], curso["nombre"], curso["year"], curso["periodo"]));
+            }
+
+            return cursos;
+        }
+
         public void estudiantes()
         {
             DataTable estudiantes = this.getEstudiantes();

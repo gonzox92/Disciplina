@@ -20,6 +20,7 @@ namespace Disciplina.Vistas.Encargado
         private Controladores.Falta falta;
         private Controladores.CursoEstudiantes cursoEstudiante;
         private Controladores.FaltasEstudiantes faltasEstudiante;
+        private Controladores.Reportes reportes;
 
         public Principal()
         {
@@ -32,41 +33,54 @@ namespace Disciplina.Vistas.Encargado
             this.falta = new Controladores.Falta();
             this.cursoEstudiante = new Controladores.CursoEstudiantes();
             this.faltasEstudiante = new Controladores.FaltasEstudiantes();
+            this.reportes = new Controladores.Reportes();
         }
 
         private void btnAdminCuentas_Click(object sender, EventArgs e)
         {
+            //this.Visible = false;
             this.controlador.cuentas();
         }
 
         private void btnCarreras_Click(object sender, EventArgs e)
         {
+            //this.Visible = false;
             this.carrera.carreras();
         }
 
         private void btnCursos_Click(object sender, EventArgs e)
         {
+            //this.Visible = false;
             this.curso.cursos();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //this.Visible = false;
             this.estudiante.estudiantes();
         }
 
         private void btnAdminFaltas_Click(object sender, EventArgs e)
         {
+            //this.Visible = false;
             this.falta.faltas();
         }
 
         private void btnCursosEstudiantes_Click(object sender, EventArgs e)
         {
+            //this.Visible = false;
             this.cursoEstudiante.registrar();
         }
 
         private void btnEstudiantesFaltas_Click(object sender, EventArgs e)
         {
+            //this.Visible = false;
             this.faltasEstudiante.principal();
+        }
+
+        private void btnAdminConsultas_Click(object sender, EventArgs e)
+        {
+            this.reportes.opciones();
         }
     }
 }

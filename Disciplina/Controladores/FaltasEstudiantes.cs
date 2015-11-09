@@ -57,6 +57,25 @@ namespace Disciplina.Controladores
             return Modelos.Consultas.Server.select(columnas, tablas, filtro);
         }
 
+        public DataTable getFaltasEstudiantesCurso(string idCurso)
+        {
+            string[] columnas = {
+                "E.codigo AS Codigo",
+                "(E.nombre + ' ' + E.apellidoPaterno + ' ' + E.apellidoMaterno) AS Nombre",
+                "REPLACE(CONVERT(VARCHAR(11),FE.fecha,103), ' ','/') AS Fecha",
+                "FE.concepto AS Concepto",
+                "FE.detalleConcepto AS Detalle",
+                "FE.puntos AS Puntos"
+            };
+            string[] tablas = { "faltasEstudiantes AS FE", "estudiantes AS E" };
+            Dictionary<string, string[]> filtro = new Dictionary<string, string[]>();
+            filtro.Add("FE.IDEstudiante", new string[] { "=", "E.ID", "AND" });
+            filtro.Add("FE.IDCurso", new string[] { "=", idCurso, "" });
+
+
+            return Modelos.Consultas.Server.select(columnas, tablas, filtro);
+        }
+
         public void principal()
         {
             DataTable carrerasTable = this.carrera.getCarreras();

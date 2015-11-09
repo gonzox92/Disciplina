@@ -420,13 +420,14 @@
             // 
             // btnAdminConsultas
             // 
-            this.btnAdminConsultas.Location = new System.Drawing.Point(108, 68);
+            this.btnAdminConsultas.Location = new System.Drawing.Point(108, 55);
             this.btnAdminConsultas.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdminConsultas.Name = "btnAdminConsultas";
             this.btnAdminConsultas.Size = new System.Drawing.Size(122, 35);
             this.btnAdminConsultas.TabIndex = 4;
             this.btnAdminConsultas.Text = "Aceptar";
             this.btnAdminConsultas.UseVisualStyleBackColor = true;
+            this.btnAdminConsultas.Click += new System.EventHandler(this.btnAdminConsultas_Click);
             // 
             // pictureBox5
             // 
