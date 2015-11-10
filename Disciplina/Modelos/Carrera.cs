@@ -9,9 +9,16 @@ namespace Disciplina.Modelos
     class Carrera : IModelo
     {
         public String nombre;
+        public String id;
 
         public Carrera(String nombre)
         {
+            this.nombre = nombre;
+        }
+
+        public Carrera(String id, String nombre)
+        {
+            this.id = id;
             this.nombre = nombre;
         }
 

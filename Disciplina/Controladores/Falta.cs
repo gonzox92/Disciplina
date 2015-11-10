@@ -40,10 +40,48 @@ namespace Disciplina.Controladores
             return vista.faltaSeleccionada;
         }
 
+        public Dictionary<string, string> getFalta(string idFalta)
+        {
+            string[] columnas = { 
+                "ID", 
+                "nombre",
+                "grado",
+                "puntos"
+            };
+            string[] tablas = { "faltasRac" };
+            Dictionary<string, string[]> filtro = new Dictionary<string, string[]>();
+            filtro.Add("ID", new string[] { "=", idFalta, "" });
+
+            DataTable carreraTable = Modelos.Consultas.Server.select(columnas, tablas, filtro);
+            string id = carreraTable.Rows[0][0].ToString();
+            string nombre = carreraTable.Rows[0][1].ToString();
+            string grado = carreraTable.Rows[0][2].ToString();
+            string puntos = carreraTable.Rows[0][3].ToString();
+
+            Dictionary<string, string> carrera = new Dictionary<string, string>();
+            carrera.Add("ID", id);
+            carrera.Add("nombre", nombre);
+            carrera.Add("grado", grado);
+            carrera.Add("puntos", puntos);
+
+            return carrera;
+        }
+
         public void registrar()
         {
-            Form vista = new Vistas.Faltas.Registrar();
+            Form vista = new Vistas.Faltas.Registrar("registrar", null);
             this.resolver(vista);
+        }
+
+        public void actualizar(string idFalta)
+        {
+            Form vista = new Vistas.Faltas.Registrar("actualizar", this.getFalta(idFalta));
+            this.resolver(vista);
+        }
+
+        public bool actualizar(string tabla, Dictionary<string, String[]> datos, Dictionary<string, String[]> llaves)
+        {
+            return Modelos.Consultas.Server.update(tabla, datos, llaves);
         }
 
         public bool registrar(Modelos.IModelo datos)

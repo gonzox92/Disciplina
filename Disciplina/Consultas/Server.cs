@@ -112,7 +112,6 @@ namespace Disciplina.Modelos.Consultas
 
             try
             {
-                //MessageBox.Show(string.Format("SELECT {0} FROM {1} WHERE {2}", columnas, tablas, valores));
                 DataTable tabla = new DataTable();
                 tabla.Load(commmand.ExecuteReader());
                 return tabla;
@@ -138,6 +137,26 @@ namespace Disciplina.Modelos.Consultas
             catch (SqlException)
             {
                 MessageBox.Show("Error al borrar");
+                return false;
+            }
+        }
+
+        public static bool update(string tabla, Dictionary<string, String[]> datos, Dictionary<string, String[]> llaves)
+        {
+            string valores = getValoresComparaciones(datos);
+            string condicionales = getValoresComparaciones(llaves);
+
+            SqlCommand commmand = new SqlCommand(string.Format("UPDATE {0} SET {1} WHERE {2}", tabla, valores, condicionales), Configuracion.Conexion.conn);
+
+            try
+            {
+                commmand.ExecuteNonQuery();
+                return true;
+            }
+            catch (SqlException e)
+            {
+                //MessageBox.Show(e.ToString());
+                MessageBox.Show(string.Format("UPDATE {0} SET {1} WHERE {2}", tabla, valores, condicionales));
                 return false;
             }
         }

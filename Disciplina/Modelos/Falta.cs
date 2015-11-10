@@ -8,12 +8,21 @@ namespace Disciplina.Modelos
 {
     class Falta : IModelo
     {
-        String grado;
+        public String id;
+        public String grado;
         public String nombre;
         public String puntos;
 
         public Falta(String grado, String nombre, String puntos)
         {
+            this.grado = grado;
+            this.nombre = nombre;
+            this.puntos = puntos;
+        }
+
+        public Falta(String id, String grado, String nombre, String puntos)
+        {
+            this.id = id;
             this.grado = grado;
             this.nombre = nombre;
             this.puntos = puntos;

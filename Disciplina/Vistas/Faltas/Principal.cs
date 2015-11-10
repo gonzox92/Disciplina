@@ -50,5 +50,19 @@ namespace Disciplina.Vistas.Faltas
                 this.dataFaltas.DataSource = this.controller.getFaltas();
             }
         }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            if (this.dataFaltas.SelectedRows.Count == 0)
+            {
+                return;
+            }
+
+            string idFalta = this.dataFaltas.SelectedRows[0].Cells[0].Value.ToString();
+
+            this.controller.actualizar(idFalta);
+
+            this.dataFaltas.DataSource = this.controller.getFaltas();
+        }
     }
 }

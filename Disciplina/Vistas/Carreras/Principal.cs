@@ -50,5 +50,19 @@ namespace Disciplina.Vistas.Carreras
                 this.dataCarreras.DataSource = this.controller.getCarreras();
             }
         }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            if (this.dataCarreras.SelectedRows.Count == 0)
+            {
+                return;
+            }
+
+            string idCarrera = this.dataCarreras.SelectedRows[0].Cells[0].Value.ToString();
+
+            this.controller.actualizar(idCarrera);
+
+            this.dataCarreras.DataSource = this.controller.getCarreras();
+        }
     }
 }

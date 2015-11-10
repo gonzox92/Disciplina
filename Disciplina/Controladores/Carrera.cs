@@ -24,6 +24,27 @@ namespace Disciplina.Controladores
             return Modelos.Consultas.Server.select(columnas, tablas, filtro);
         }
 
+        public Dictionary<string, string> getCarrera(string idCarrera)
+        {
+            string[] columnas = { 
+                "ID", 
+                "nombre"
+            };
+            string[] tablas = { "carreras" };
+            Dictionary<string, string[]> filtro = new Dictionary<string, string[]>();
+            filtro.Add("ID", new string[] { "=", idCarrera, "" });
+
+            DataTable carreraTable = Modelos.Consultas.Server.select(columnas, tablas, filtro);
+            string id = carreraTable.Rows[0][0].ToString();
+            string nombre = carreraTable.Rows[0][1].ToString();
+
+            Dictionary<string, string> carrera = new Dictionary<string,string>();
+            carrera.Add("ID", id);
+            carrera.Add("nombre", nombre);
+
+            return carrera;
+        }
+
         public void carreras()
         {
             DataTable cuentas = this.getCarreras();
@@ -33,8 +54,19 @@ namespace Disciplina.Controladores
 
         public void registrar()
         {
-            Form vista = new Vistas.Carreras.Registrar();
+            Form vista = new Vistas.Carreras.Registrar("registrar", null);
             this.resolver(vista);
+        }
+
+        public void actualizar(string idCarrera)
+        {
+            Form vista = new Vistas.Carreras.Registrar("actualizar", this.getCarrera(idCarrera));
+            this.resolver(vista);
+        }
+
+        public bool actualizar(string tabla, Dictionary<string, String[]> datos, Dictionary<string, String[]> llaves)
+        {
+            return Modelos.Consultas.Server.update(tabla, datos, llaves);
         }
 
         public bool registrar(Modelos.IModelo datos)
