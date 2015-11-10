@@ -98,6 +98,52 @@ namespace Disciplina.Controladores
             return cursos;
         }
 
+        public Dictionary<string, string> getEstudiante(string idEstudiante)
+        {
+            string[] columnas = { 
+                "E.ID", 
+                "E.codigo",
+                "E.nombre", 
+                "E.apellidoPaterno", 
+                "E.apellidoMaterno",
+                "E.direccion",
+                "E.telefono",
+                "E.ci",
+                "C.ID AS IDCarrera",
+                "C.nombre as carrera"
+            };
+            string[] tablas = { "estudiantes AS E", "carreras AS C" };
+            Dictionary<string, string[]> filtro = new Dictionary<string, string[]>();
+            filtro.Add("E.carrera", new string[] { "=", "C.ID", "AND" });
+            filtro.Add("E.ID", new string[] { "=", idEstudiante, "" });
+
+            DataTable carreraTable = Modelos.Consultas.Server.select(columnas, tablas, filtro);
+            string id = carreraTable.Rows[0][0].ToString();
+            string codigo = carreraTable.Rows[0][1].ToString();
+            string nombre = carreraTable.Rows[0][2].ToString();
+            string apellidoPaterno = carreraTable.Rows[0][3].ToString();
+            string apellidoMaterno = carreraTable.Rows[0][4].ToString();
+            string direccion = carreraTable.Rows[0][5].ToString();
+            string telefono = carreraTable.Rows[0][6].ToString();
+            string ci = carreraTable.Rows[0][7].ToString();
+            string idCarrera = carreraTable.Rows[0][8].ToString();
+            string carrera = carreraTable.Rows[0][9].ToString();
+
+            Dictionary<string, string> estudiante = new Dictionary<string, string>();
+            estudiante.Add("ID", id);
+            estudiante.Add("codigo", codigo);
+            estudiante.Add("nombre", nombre);
+            estudiante.Add("apellidoPaterno", apellidoPaterno);
+            estudiante.Add("apellidoMaterno", apellidoMaterno);
+            estudiante.Add("direccion", direccion);
+            estudiante.Add("telefono", telefono);
+            estudiante.Add("ci", ci);
+            estudiante.Add("IDCarrera", idCarrera);
+            estudiante.Add("carrera", carrera);
+
+            return estudiante;
+        }
+
         public void estudiantes()
         {
             DataTable estudiantes = this.getEstudiantes();
@@ -116,8 +162,28 @@ namespace Disciplina.Controladores
                 carrerasEmi.Add(carrera["ID"].ToString(), carrera["nombre"].ToString());
             }
 
-            Form vista = new Vistas.Estudiantes.Registrar(carrerasEmi);
+            Form vista = new Vistas.Estudiantes.Registrar(carrerasEmi, "registrar", null);
             this.resolver(vista);
+        }
+
+        public void actualizar(string idEstudiante)
+        {
+            Controladores.Carrera carreraController = new Controladores.Carrera();
+            DataTable carreras = carreraController.getCarreras();
+
+            Dictionary<string, string> carrerasEmi = new Dictionary<string, string>();
+            foreach (DataRow carrera in carreras.Rows)
+            {
+                carrerasEmi.Add(carrera["ID"].ToString(), carrera["nombre"].ToString());
+            }
+
+            Form vista = new Vistas.Estudiantes.Registrar(carrerasEmi, "actualizar", this.getEstudiante(idEstudiante));
+            this.resolver(vista);
+        }
+
+        public bool actualizar(string tabla, Dictionary<string, String[]> datos, Dictionary<string, String[]> llaves)
+        {
+            return Modelos.Consultas.Server.update(tabla, datos, llaves);
         }
 
         public bool registrar(Modelos.IModelo datos)

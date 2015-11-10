@@ -8,6 +8,7 @@ namespace Disciplina.Modelos
 {
     class Estudiante : Usuario, IModelo
     {
+        public String id;
         public String ci;
         public String codigo;
         public String telefono;
@@ -17,6 +18,17 @@ namespace Disciplina.Modelos
         public Estudiante(String ci, String nombre, String apellidoPaterno, String apellidoMaterno, String codigo, String carrera, String telefono, String direccion)
             : base(nombre, apellidoMaterno, apellidoMaterno, codigo, codigo, "estudiante")
         {
+            this.ci = ci;
+            this.codigo = codigo;
+            this.telefono = telefono;
+            this.direccion = direccion;
+            this.carrera = carrera;
+        }
+
+        public Estudiante(String id, String ci, String nombre, String apellidoPaterno, String apellidoMaterno, String codigo, String carrera, String telefono, String direccion)
+            : base(nombre, apellidoMaterno, apellidoMaterno, codigo, codigo, "estudiante")
+        {
+            this.id = id;
             this.ci = ci;
             this.codigo = codigo;
             this.telefono = telefono;

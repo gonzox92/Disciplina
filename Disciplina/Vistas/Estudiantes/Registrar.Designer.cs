@@ -33,7 +33,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelRegistrarEstudiante = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -120,17 +120,17 @@
             this.pictureBox8.TabIndex = 19;
             this.pictureBox8.TabStop = false;
             // 
-            // label1
+            // labelRegistrarEstudiante
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label1.Location = new System.Drawing.Point(62, 17);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(175, 20);
-            this.label1.TabIndex = 25;
-            this.label1.Text = "Registrar Estudiante";
+            this.labelRegistrarEstudiante.AutoSize = true;
+            this.labelRegistrarEstudiante.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRegistrarEstudiante.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.labelRegistrarEstudiante.Location = new System.Drawing.Point(62, 17);
+            this.labelRegistrarEstudiante.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelRegistrarEstudiante.Name = "labelRegistrarEstudiante";
+            this.labelRegistrarEstudiante.Size = new System.Drawing.Size(175, 20);
+            this.labelRegistrarEstudiante.TabIndex = 25;
+            this.labelRegistrarEstudiante.Text = "Registrar Estudiante";
             // 
             // btnCancelar
             // 
@@ -427,7 +427,7 @@
             this.ClientSize = new System.Drawing.Size(446, 666);
             this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelRegistrarEstudiante);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox1);
@@ -463,7 +463,7 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelRegistrarEstudiante;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureBox5;

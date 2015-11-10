@@ -50,5 +50,19 @@ namespace Disciplina.Vistas.Estudiantes
                 this.dataEstudiantes.DataSource = this.controller.getEstudiantes();
             }
         }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            if (this.dataEstudiantes.SelectedRows.Count == 0)
+            {
+                return;
+            }
+
+            string idEstudiante = this.dataEstudiantes.SelectedRows[0].Cells[0].Value.ToString();
+
+            this.controller.actualizar(idEstudiante);
+
+            this.dataEstudiantes.DataSource = this.controller.getEstudiantes();
+        }
     }
 }
