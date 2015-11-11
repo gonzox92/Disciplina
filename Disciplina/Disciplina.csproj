@@ -177,6 +177,12 @@
     <Compile Include="Vistas\Faltas\Registrar.Designer.cs">
       <DependentUpon>Registrar.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\Jefe-Personal\Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Jefe-Personal\Principal.Designer.cs">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Oficial\Principal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -212,6 +218,12 @@
     </Compile>
     <Compile Include="Vistas\Reportes\Opciones.Designer.cs">
       <DependentUpon>Opciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Secretaria\Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Secretaria\Principal.Designer.cs">
+      <DependentUpon>Principal.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -274,6 +286,9 @@
     <EmbeddedResource Include="Vistas\Faltas\Registrar.resx">
       <DependentUpon>Registrar.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Jefe-Personal\Principal.resx">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Oficial\Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>
     </EmbeddedResource>
@@ -291,6 +306,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Reportes\Opciones.resx">
       <DependentUpon>Opciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Secretaria\Principal.resx">
+      <DependentUpon>Principal.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

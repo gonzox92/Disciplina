@@ -15,5 +15,10 @@ namespace Disciplina.Controladores
         {
             vista.ShowDialog();
         }
+
+        public bool actualizar(string tabla, Dictionary<string, String[]> datos, Dictionary<string, String[]> llaves)
+        {
+            return Modelos.Consultas.Server.update(tabla, datos, llaves);
+        }
     }
 }

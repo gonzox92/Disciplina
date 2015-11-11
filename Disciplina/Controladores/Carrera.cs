@@ -64,11 +64,6 @@ namespace Disciplina.Controladores
             this.resolver(vista);
         }
 
-        public bool actualizar(string tabla, Dictionary<string, String[]> datos, Dictionary<string, String[]> llaves)
-        {
-            return Modelos.Consultas.Server.update(tabla, datos, llaves);
-        }
-
         public bool registrar(Modelos.IModelo datos)
         {
             return Modelos.Consultas.Server.insert("carreras", datos.esquema());

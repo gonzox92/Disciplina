@@ -84,6 +84,7 @@
             this.btnModificar.TabIndex = 5;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnRegistrar
             // 
@@ -118,6 +119,7 @@
             this.dataSemestres.GridColor = System.Drawing.Color.White;
             this.dataSemestres.Location = new System.Drawing.Point(16, 28);
             this.dataSemestres.Margin = new System.Windows.Forms.Padding(2);
+            this.dataSemestres.MultiSelect = false;
             this.dataSemestres.Name = "dataSemestres";
             this.dataSemestres.ReadOnly = true;
             this.dataSemestres.RowHeadersVisible = false;

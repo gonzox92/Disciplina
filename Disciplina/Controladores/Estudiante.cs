@@ -98,25 +98,8 @@ namespace Disciplina.Controladores
             return cursos;
         }
 
-        public Dictionary<string, string> getEstudiante(string idEstudiante)
+        private Dictionary<string, string> getDatosEstudiante(string[] columnas, string[] tablas, Dictionary<string, string[]> filtro)
         {
-            string[] columnas = { 
-                "E.ID", 
-                "E.codigo",
-                "E.nombre", 
-                "E.apellidoPaterno", 
-                "E.apellidoMaterno",
-                "E.direccion",
-                "E.telefono",
-                "E.ci",
-                "C.ID AS IDCarrera",
-                "C.nombre as carrera"
-            };
-            string[] tablas = { "estudiantes AS E", "carreras AS C" };
-            Dictionary<string, string[]> filtro = new Dictionary<string, string[]>();
-            filtro.Add("E.carrera", new string[] { "=", "C.ID", "AND" });
-            filtro.Add("E.ID", new string[] { "=", idEstudiante, "" });
-
             DataTable carreraTable = Modelos.Consultas.Server.select(columnas, tablas, filtro);
             string id = carreraTable.Rows[0][0].ToString();
             string codigo = carreraTable.Rows[0][1].ToString();
@@ -142,6 +125,50 @@ namespace Disciplina.Controladores
             estudiante.Add("carrera", carrera);
 
             return estudiante;
+        }
+
+        public Dictionary<string, string> getEstudiante(string idEstudiante)
+        {
+            string[] columnas = { 
+                "E.ID", 
+                "E.codigo",
+                "E.nombre", 
+                "E.apellidoPaterno", 
+                "E.apellidoMaterno",
+                "E.direccion",
+                "E.telefono",
+                "E.ci",
+                "C.ID AS IDCarrera",
+                "C.nombre as carrera"
+            };
+            string[] tablas = { "estudiantes AS E", "carreras AS C" };
+            Dictionary<string, string[]> filtro = new Dictionary<string, string[]>();
+            filtro.Add("E.carrera", new string[] { "=", "C.ID", "AND" });
+            filtro.Add("E.ID", new string[] { "=", idEstudiante, "" });
+
+            return this.getDatosEstudiante(columnas, tablas, filtro);
+        }
+
+        public Dictionary<string, string> getEstudianteByCodigo(string codigo)
+        {
+            string[] columnas = { 
+                "E.ID", 
+                "E.codigo",
+                "E.nombre", 
+                "E.apellidoPaterno", 
+                "E.apellidoMaterno",
+                "E.direccion",
+                "E.telefono",
+                "E.ci",
+                "C.ID AS IDCarrera",
+                "C.nombre as carrera"
+            };
+            string[] tablas = { "estudiantes AS E", "carreras AS C" };
+            Dictionary<string, string[]> filtro = new Dictionary<string, string[]>();
+            filtro.Add("E.carrera", new string[] { "=", "C.ID", "AND" });
+            filtro.Add("E.codigo", new string[] { "=", string.Format("'{0}'", codigo), "" });
+
+            return this.getDatosEstudiante(columnas, tablas, filtro);
         }
 
         public void estudiantes()
@@ -179,11 +206,6 @@ namespace Disciplina.Controladores
 
             Form vista = new Vistas.Estudiantes.Registrar(carrerasEmi, "actualizar", this.getEstudiante(idEstudiante));
             this.resolver(vista);
-        }
-
-        public bool actualizar(string tabla, Dictionary<string, String[]> datos, Dictionary<string, String[]> llaves)
-        {
-            return Modelos.Consultas.Server.update(tabla, datos, llaves);
         }
 
         public bool registrar(Modelos.IModelo datos)

@@ -50,3 +50,5 @@ C:\Users\Gonzalo\Desktop\Disciplina\Disciplina\obj\Debug\Disciplina.Vistas.Repor
 C:\Users\Gonzalo\Desktop\Disciplina\Disciplina\obj\Debug\Disciplina.Vistas.Reportes.Cursos.resources
 C:\Users\Gonzalo\Desktop\Disciplina\Disciplina\obj\Debug\Disciplina.Vistas.Reportes.ListaEstudiantes.resources
 C:\Users\Gonzalo\Desktop\Disciplina\Disciplina\obj\Debug\Disciplina.Vistas.Reportes.Estudiante.resources
+C:\Users\Gonzalo\Desktop\Disciplina\Disciplina\obj\Debug\Disciplina.Vistas.Jefe_Personal.Principal.resources
+C:\Users\Gonzalo\Desktop\Disciplina\Disciplina\obj\Debug\Disciplina.Vistas.Secretaria.Principal.resources

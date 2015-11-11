@@ -57,6 +57,34 @@ namespace Disciplina.Controladores
             return cursos;
         }
 
+        public Dictionary<string, string> getCurso(string idCurso)
+        {
+            string[] columnas = { 
+                "*"
+            };
+            string[] tablas = { "cursos" };
+            Dictionary<string, string[]> filtro = new Dictionary<string, string[]>();
+            filtro.Add("ID", new string[] { "=", idCurso, "" });
+
+            DataTable carreraTable = Modelos.Consultas.Server.select(columnas, tablas, filtro);
+            string id = carreraTable.Rows[0][0].ToString();
+            string idCarrera = carreraTable.Rows[0][1].ToString();
+            string year = carreraTable.Rows[0][2].ToString();
+            string periodo = carreraTable.Rows[0][3].ToString();
+            string paralelo = carreraTable.Rows[0][4].ToString();
+            string nombreCurso = carreraTable.Rows[0][5].ToString();
+
+            Dictionary<string, string> curso = new Dictionary<string, string>();
+            curso.Add("ID", id);
+            curso.Add("IDCarrera", idCarrera);
+            curso.Add("year", year);
+            curso.Add("periodo", periodo);
+            curso.Add("paralelo", paralelo);
+            curso.Add("curso", nombreCurso);
+
+            return curso;
+        }
+
         public void cursos()
         {
             DataTable cursos = this.getCursos();
@@ -74,7 +102,21 @@ namespace Disciplina.Controladores
                 carreras.Add(fila["ID"].ToString(), fila["Nombre"].ToString());
             }
 
-            Form vista = new Vistas.Cursos.Registrar(carreras);
+            Form vista = new Vistas.Cursos.Registrar("registrar", carreras, null);
+            this.resolver(vista);
+        }
+
+        public void actualizar(string idCurso)
+        {
+            DataTable carrerasTable = this.carrera.getCarreras();
+            Dictionary<string, string> carreras = new Dictionary<string, string>();
+
+            foreach (DataRow fila in carrerasTable.Rows)
+            {
+                carreras.Add(fila["ID"].ToString(), fila["Nombre"].ToString());
+            }
+
+            Form vista = new Vistas.Cursos.Registrar("actualizar", carreras, this.getCurso(idCurso));
             this.resolver(vista);
         }
 

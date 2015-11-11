@@ -32,7 +32,7 @@
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.txtCarrera = new System.Windows.Forms.ComboBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelRegistrarCurso = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -98,17 +98,17 @@
             this.pictureBox2.TabIndex = 27;
             this.pictureBox2.TabStop = false;
             // 
-            // label1
+            // labelRegistrarCurso
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label1.Location = new System.Drawing.Point(70, 21);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(135, 20);
-            this.label1.TabIndex = 25;
-            this.label1.Text = "Registrar Curso";
+            this.labelRegistrarCurso.AutoSize = true;
+            this.labelRegistrarCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRegistrarCurso.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.labelRegistrarCurso.Location = new System.Drawing.Point(70, 21);
+            this.labelRegistrarCurso.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelRegistrarCurso.Name = "labelRegistrarCurso";
+            this.labelRegistrarCurso.Size = new System.Drawing.Size(135, 20);
+            this.labelRegistrarCurso.TabIndex = 25;
+            this.labelRegistrarCurso.Text = "Registrar Curso";
             // 
             // btnCancelar
             // 
@@ -373,7 +373,7 @@
             this.ClientSize = new System.Drawing.Size(463, 526);
             this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelRegistrarCurso);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox1);
@@ -382,6 +382,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Registrar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.Registrar_Load);
@@ -405,7 +407,7 @@
         private System.Windows.Forms.Button btnRegistrar;
         private System.Windows.Forms.ComboBox txtCarrera;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelRegistrarCurso;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label3;

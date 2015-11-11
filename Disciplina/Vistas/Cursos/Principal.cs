@@ -50,5 +50,19 @@ namespace Disciplina.Vistas.Cursos
                 this.dataSemestres.DataSource = this.controller.getCursos();
             }
         }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            if (this.dataSemestres.SelectedRows.Count == 0)
+            {
+                return;
+            }
+
+            string idCurso = this.dataSemestres.SelectedRows[0].Cells[0].Value.ToString();
+
+            this.controller.actualizar(idCurso);
+
+            this.dataSemestres.DataSource = this.controller.getCursos();
+        }
     }
 }

@@ -24,14 +24,9 @@ namespace Disciplina.Vistas.Comunes
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            if (this.txtCodigo.Text == "")
+            if (this.txtPrivilegio.Text == "")
             {
-                MessageBox.Show("Ingrese el codigo");
-                return;
-            }
-            if (this.txtGrado.Text == "")
-            {
-                MessageBox.Show("Ingrese el grado");
+                MessageBox.Show("Ingrese el Privilegio");
                 return;
             }
             if (this.txtNombre.Text == "")
@@ -56,7 +51,7 @@ namespace Disciplina.Vistas.Comunes
                 this.txtApellidoMaterno.Text,
                 this.txtUsuario.Text,
                 this.txtPassword.Text,
-                "oficial");
+                this.txtPrivilegio.Text);
 
             if (controller.registrar(oficial))
             {

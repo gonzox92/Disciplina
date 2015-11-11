@@ -44,5 +44,13 @@ namespace Disciplina.Controladores
         {
             return Modelos.Consultas.Server.insert("usuarios", datos.esquema());
         }
+
+        public bool eliminar(string id)
+        {
+            Dictionary<string, String[]> datos = new Dictionary<string, String[]>();
+            datos.Add("ID", new string[] { "=", id, "" });
+
+            return Modelos.Consultas.Server.delete("usuarios", datos);
+        }
     }
 }

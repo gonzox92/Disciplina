@@ -8,11 +8,22 @@ namespace Disciplina.Modelos
 {
     class Curso : IModelo
     {
+        public String ID;
         public String IDCarrera;
         public String paralelo;
         public String year;
         public String periodo;
         public String curso;
+
+        public Curso(String ID, String IDCarrera, String year, String periodo, String curso, String paralelo)
+        {
+            this.ID = ID;
+            this.IDCarrera = IDCarrera;
+            this.paralelo = paralelo;
+            this.year = year;
+            this.periodo = periodo;
+            this.curso = curso;
+        }
 
         public Curso(String IDCarrera, String year, String periodo, String curso, String paralelo)
         {

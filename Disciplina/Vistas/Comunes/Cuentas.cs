@@ -33,5 +33,22 @@ namespace Disciplina.Vistas.Comunes
         {
             this.dataCuentas.DataSource = this.cuentas;
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (this.dataCuentas.SelectedRows.Count == 0)
+            {
+                return;
+            }
+            if (MessageBox.Show("Desea eliminar los cursos seleccionados?", "Eliminar", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                foreach (DataGridViewRow row in this.dataCuentas.SelectedRows)
+                {
+                    this.controller.eliminar(row.Cells[0].Value.ToString());
+                }
+
+                this.dataCuentas.DataSource = this.controller.getCuentas();
+            }
+        }
     }
 }

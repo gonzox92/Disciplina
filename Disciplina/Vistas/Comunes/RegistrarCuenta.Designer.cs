@@ -37,7 +37,7 @@
             this.txtApellidoMaterno = new System.Windows.Forms.TextBox();
             this.txtApellidoPaterno = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
-            this.txtGrado = new System.Windows.Forms.ComboBox();
+            this.txtPrivilegio = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -49,15 +49,12 @@
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.txtCodigo = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -70,7 +67,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -78,8 +74,8 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Gold;
-            this.panel2.Location = new System.Drawing.Point(239, 630);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Location = new System.Drawing.Point(216, 557);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(315, 13);
             this.panel2.TabIndex = 13;
@@ -87,8 +83,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.panel1.Location = new System.Drawing.Point(-152, 630);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Location = new System.Drawing.Point(-175, 557);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(397, 13);
             this.panel1.TabIndex = 12;
@@ -100,7 +96,7 @@
             this.groupBox1.Controls.Add(this.txtApellidoMaterno);
             this.groupBox1.Controls.Add(this.txtApellidoPaterno);
             this.groupBox1.Controls.Add(this.txtNombre);
-            this.groupBox1.Controls.Add(this.txtGrado);
+            this.groupBox1.Controls.Add(this.txtPrivilegio);
             this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.label11);
@@ -112,85 +108,79 @@
             this.groupBox1.Controls.Add(this.pictureBox6);
             this.groupBox1.Controls.Add(this.pictureBox5);
             this.groupBox1.Controls.Add(this.pictureBox4);
-            this.groupBox1.Controls.Add(this.pictureBox3);
-            this.groupBox1.Controls.Add(this.txtCodigo);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(16, 63);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox1.Size = new System.Drawing.Size(416, 493);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Size = new System.Drawing.Size(416, 414);
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(57, 444);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPassword.Location = new System.Drawing.Point(59, 373);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(2);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(318, 20);
             this.txtPassword.TabIndex = 31;
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(57, 375);
-            this.txtUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtUsuario.Location = new System.Drawing.Point(59, 304);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(318, 20);
             this.txtUsuario.TabIndex = 30;
             // 
             // txtApellidoMaterno
             // 
-            this.txtApellidoMaterno.Location = new System.Drawing.Point(57, 307);
-            this.txtApellidoMaterno.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtApellidoMaterno.Location = new System.Drawing.Point(59, 236);
+            this.txtApellidoMaterno.Margin = new System.Windows.Forms.Padding(2);
             this.txtApellidoMaterno.Name = "txtApellidoMaterno";
             this.txtApellidoMaterno.Size = new System.Drawing.Size(318, 20);
             this.txtApellidoMaterno.TabIndex = 29;
             // 
             // txtApellidoPaterno
             // 
-            this.txtApellidoPaterno.Location = new System.Drawing.Point(58, 239);
-            this.txtApellidoPaterno.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtApellidoPaterno.Location = new System.Drawing.Point(60, 168);
+            this.txtApellidoPaterno.Margin = new System.Windows.Forms.Padding(2);
             this.txtApellidoPaterno.Name = "txtApellidoPaterno";
             this.txtApellidoPaterno.Size = new System.Drawing.Size(318, 20);
             this.txtApellidoPaterno.TabIndex = 28;
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(58, 171);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNombre.Location = new System.Drawing.Point(60, 100);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(318, 20);
             this.txtNombre.TabIndex = 27;
             // 
-            // txtGrado
+            // txtPrivilegio
             // 
-            this.txtGrado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.txtGrado.FormattingEnabled = true;
-            this.txtGrado.Items.AddRange(new object[] {
-            "Subte.",
-            "Tnte.",
-            "Cap.",
-            "My.",
-            "TnCnl.",
-            "Cnl.",
-            "Gnral."});
-            this.txtGrado.Location = new System.Drawing.Point(59, 99);
-            this.txtGrado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txtGrado.Name = "txtGrado";
-            this.txtGrado.Size = new System.Drawing.Size(318, 21);
-            this.txtGrado.TabIndex = 26;
+            this.txtPrivilegio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txtPrivilegio.FormattingEnabled = true;
+            this.txtPrivilegio.Items.AddRange(new object[] {
+            "Encargado de disciplina",
+            "Oficial",
+            "Jefe de Personal",
+            "Secretaria"});
+            this.txtPrivilegio.Location = new System.Drawing.Point(61, 28);
+            this.txtPrivilegio.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPrivilegio.Name = "txtPrivilegio";
+            this.txtPrivilegio.Size = new System.Drawing.Size(318, 21);
+            this.txtPrivilegio.TabIndex = 26;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(379, 448);
+            this.label13.Location = new System.Drawing.Point(381, 377);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(11, 13);
@@ -200,7 +190,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(380, 375);
+            this.label12.Location = new System.Drawing.Point(382, 304);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(11, 13);
@@ -210,7 +200,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(379, 171);
+            this.label11.Location = new System.Drawing.Point(381, 100);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(11, 13);
@@ -220,7 +210,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(379, 105);
+            this.label10.Location = new System.Drawing.Point(381, 34);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(11, 13);
@@ -240,8 +230,8 @@
             // pictureBox9
             // 
             this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
-            this.pictureBox9.Location = new System.Drawing.Point(16, 427);
-            this.pictureBox9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox9.Location = new System.Drawing.Point(18, 356);
+            this.pictureBox9.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(36, 34);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -251,8 +241,8 @@
             // pictureBox8
             // 
             this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(16, 359);
-            this.pictureBox8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox8.Location = new System.Drawing.Point(18, 288);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(36, 34);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -262,8 +252,8 @@
             // pictureBox7
             // 
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(16, 291);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox7.Location = new System.Drawing.Point(18, 220);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(36, 34);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -273,8 +263,8 @@
             // pictureBox6
             // 
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(16, 223);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox6.Location = new System.Drawing.Point(18, 152);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(36, 34);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -284,8 +274,8 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(16, 154);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox5.Location = new System.Drawing.Point(18, 83);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(36, 34);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -295,37 +285,18 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(16, 86);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox4.Location = new System.Drawing.Point(18, 15);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(36, 34);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 15;
             this.pictureBox4.TabStop = false;
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(16, 19);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(36, 34);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 14;
-            this.pictureBox3.TabStop = false;
-            // 
-            // txtCodigo
-            // 
-            this.txtCodigo.Location = new System.Drawing.Point(59, 34);
-            this.txtCodigo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(318, 20);
-            this.txtCodigo.TabIndex = 7;
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(57, 427);
+            this.label8.Location = new System.Drawing.Point(59, 356);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(61, 13);
@@ -335,7 +306,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(57, 359);
+            this.label7.Location = new System.Drawing.Point(59, 288);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(43, 13);
@@ -345,7 +316,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(57, 291);
+            this.label6.Location = new System.Drawing.Point(59, 220);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(86, 13);
@@ -355,7 +326,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(57, 223);
+            this.label5.Location = new System.Drawing.Point(59, 152);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(84, 13);
@@ -365,7 +336,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(57, 154);
+            this.label4.Location = new System.Drawing.Point(59, 83);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(44, 13);
@@ -375,29 +346,19 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(57, 86);
+            this.label3.Location = new System.Drawing.Point(59, 15);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(36, 13);
+            this.label3.Size = new System.Drawing.Size(49, 13);
             this.label3.TabIndex = 1;
-            this.label3.Text = "Grado";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(57, 18);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(40, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Cogido";
+            this.label3.Text = "Privilegio";
             // 
             // btnRegistrar
             // 
             this.btnRegistrar.Image = ((System.Drawing.Image)(resources.GetObject("btnRegistrar.Image")));
             this.btnRegistrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRegistrar.Location = new System.Drawing.Point(101, 571);
-            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRegistrar.Location = new System.Drawing.Point(98, 497);
+            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(2);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(110, 36);
             this.btnRegistrar.TabIndex = 15;
@@ -409,8 +370,8 @@
             // 
             this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(232, 571);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancelar.Location = new System.Drawing.Point(229, 497);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(110, 36);
             this.btnCancelar.TabIndex = 16;
@@ -422,7 +383,7 @@
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(16, 8);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(44, 46);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -433,7 +394,7 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(314, 8);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(110, 46);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -457,7 +418,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(452, 609);
+            this.ClientSize = new System.Drawing.Size(452, 563);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
@@ -468,7 +429,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "RegistrarCuenta";
@@ -481,7 +442,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -505,7 +465,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
@@ -517,13 +476,11 @@
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.TextBox txtApellidoMaterno;
         private System.Windows.Forms.TextBox txtApellidoPaterno;
         private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.ComboBox txtGrado;
+        private System.Windows.Forms.ComboBox txtPrivilegio;
     }
 }
