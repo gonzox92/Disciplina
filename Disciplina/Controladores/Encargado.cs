@@ -22,7 +22,7 @@ namespace Disciplina.Controladores
             };
             string[] tablas = { "usuarios" };
             Dictionary<string, string[]> filtro = new Dictionary<string, string[]>();
-            filtro.Add("1", new string[] { "=", "1", "" });
+            filtro.Add("privilegio", new string[] { "!=", "'estudiante'", "" });
 
             return Modelos.Consultas.Server.select(columnas, tablas, filtro);
         }
