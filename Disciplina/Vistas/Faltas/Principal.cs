@@ -31,7 +31,7 @@ namespace Disciplina.Vistas.Faltas
         {
             this.controller.registrar();
             this.dataFaltas.Columns.Clear();
-            this.dataFaltas.DataSource = this.controller.getFaltas();
+            this.filtrarFaltas();
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -46,8 +46,7 @@ namespace Disciplina.Vistas.Faltas
                 {
                     this.controller.eliminar(row.Cells[0].Value.ToString());
                 }
-
-                this.dataFaltas.DataSource = this.controller.getFaltas();
+                this.filtrarFaltas();
             }
         }
 
@@ -61,8 +60,38 @@ namespace Disciplina.Vistas.Faltas
             string idFalta = this.dataFaltas.SelectedRows[0].Cells[0].Value.ToString();
 
             this.controller.actualizar(idFalta);
+            this.filtrarFaltas();
+        }
 
-            this.dataFaltas.DataSource = this.controller.getFaltas();
+        private void filtrarFaltas()
+        {
+            string grado = this.txtGrado.Text;
+            string falta = this.txtFalta.Text;
+            string puntos = this.txtPuntos.Value.ToString();
+
+            this.dataFaltas.DataSource = this.controller.filterFaltas(grado, falta, puntos);
+        }
+
+        private void txtGrado_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this.filtrarFaltas();
+        }
+
+        private void txtFalta_TextChanged(object sender, EventArgs e)
+        {
+            this.filtrarFaltas();
+        }
+
+        private void txtPuntos_ValueChanged(object sender, EventArgs e)
+        {
+            this.filtrarFaltas();
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            this.txtGrado.Text = "";
+            this.txtFalta.Text = "";
+            this.txtPuntos.Value = 0;
         }
     }
 }

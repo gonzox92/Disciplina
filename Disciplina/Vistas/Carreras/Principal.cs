@@ -26,7 +26,7 @@ namespace Disciplina.Vistas.Carreras
         {
             this.controller.registrar();
             this.dataCarreras.Columns.Clear();
-            this.dataCarreras.DataSource = this.controller.getCarreras();
+            this.filterCarrera();
         }
 
         private void Principal_Load(object sender, EventArgs e)
@@ -47,7 +47,7 @@ namespace Disciplina.Vistas.Carreras
                     this.controller.eliminar(row.Cells[0].Value.ToString());
                 }
 
-                this.dataCarreras.DataSource = this.controller.getCarreras();
+                this.filterCarrera();
             }
         }
 
@@ -62,7 +62,24 @@ namespace Disciplina.Vistas.Carreras
 
             this.controller.actualizar(idCarrera);
 
-            this.dataCarreras.DataSource = this.controller.getCarreras();
+            this.filterCarrera();
+        }
+
+        private void filterCarrera()
+        {
+            string nombre = this.txtNombre.Text;
+
+            this.dataCarreras.DataSource = this.controller.filterCarreras(nombre);
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+            this.filterCarrera();
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            this.txtNombre.Text = "";
         }
     }
 }

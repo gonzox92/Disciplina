@@ -26,7 +26,7 @@ namespace Disciplina.Vistas.Comunes
         {
             this.controller.registrar();
             this.dataCuentas.Columns.Clear();
-            this.dataCuentas.DataSource = this.controller.getCuentas();
+            this.filterCuentas();
         }
 
         private void Cuentas_Load(object sender, EventArgs e)
@@ -47,7 +47,7 @@ namespace Disciplina.Vistas.Comunes
                     this.controller.eliminar(row.Cells[0].Value.ToString());
                 }
 
-                this.dataCuentas.DataSource = this.controller.getCuentas();
+                this.filterCuentas();
             }
         }
 
@@ -62,7 +62,9 @@ namespace Disciplina.Vistas.Comunes
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            this.filterCuentas();
+            this.txtNombre.Text = "";
+            this.txtUsuario.Text = "";
+            this.txtPrivilegio.Text = "";
         }
 
         private void txtNombre_TextChanged(object sender, EventArgs e)

@@ -24,6 +24,20 @@ namespace Disciplina.Controladores
             return Modelos.Consultas.Server.select(columnas, tablas, filtro);
         }
 
+        public DataTable filterCarreras(string nombre)
+        {
+            string[] columnas = { 
+                "ID", 
+                "nombre AS Nombre"
+            };
+            string[] tablas = { "carreras" };
+            Dictionary<string, string[]> filtro = new Dictionary<string, string[]>();
+            filtro.Add("nombre", new string[] { " LIKE", string.Format("'%{0}%'", nombre), "" });
+            filtro.Add("ORDER BY ", new string[] { "nombre", "ASC", "" });
+
+            return Modelos.Consultas.Server.select(columnas, tablas, filtro);
+        }
+
         public Dictionary<string, string> getCarrera(string idCarrera)
         {
             string[] columnas = { 

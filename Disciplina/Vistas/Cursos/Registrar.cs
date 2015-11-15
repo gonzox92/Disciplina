@@ -41,7 +41,6 @@ namespace Disciplina.Vistas.Cursos
 
             if (this.operacion == "actualizar")
             {
-                //int year = int.Parse(this.curso.year);
                 this.labelRegistrarCurso.Text = "Actualizar Curso";
                 this.btnRegistrar.Text = "Actualizar";
                 this.txtYear.Value = int.Parse(this.curso.year);

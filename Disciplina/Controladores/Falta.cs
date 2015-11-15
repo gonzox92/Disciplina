@@ -25,6 +25,23 @@ namespace Disciplina.Controladores
             return Modelos.Consultas.Server.select(columnas, tablas, filtro);
         }
 
+        public DataTable filterFaltas(string grado, string falta, string puntos)
+        {
+            string[] columnas = { 
+                "ID", 
+                "grado AS Grado",
+                "nombre AS Falta",
+                "puntos AS Puntos"
+            };
+            string[] tablas = { "faltasRac" };
+            Dictionary<string, string[]> filtro = new Dictionary<string, string[]>();
+            filtro.Add("grado", new string[] { " LIKE", string.Format("'%{0}%'", grado), "AND" });
+            filtro.Add("nombre", new string[] { " LIKE", string.Format("'%{0}%'", falta), "AND" });
+            filtro.Add("puntos", new string[] { ">=", puntos, "" });
+
+            return Modelos.Consultas.Server.select(columnas, tablas, filtro);
+        }
+
         public void faltas()
         {
             DataTable faltas = this.getFaltas();

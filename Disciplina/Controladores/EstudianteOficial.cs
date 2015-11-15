@@ -10,6 +10,13 @@ namespace Disciplina.Controladores
 {
     class EstudianteOficial : Controller
     {
+        private Carrera carrera;
+
+        public EstudianteOficial()
+        {
+            this.carrera = new Carrera();
+        }
+
         public DataTable getOficiales()
         {
             string[] columnas = { 
@@ -25,6 +32,30 @@ namespace Disciplina.Controladores
             string[] tablas = { "oficiales AS E", "carreras AS C" };
             Dictionary<string, string[]> filtro = new Dictionary<string, string[]>();
             filtro.Add("E.carrera", new string[] { "=", "C.ID", "" });
+
+            return Modelos.Consultas.Server.select(columnas, tablas, filtro);
+        }
+
+        public DataTable filterOficiales(string codigo, string grado, string ci, string nombre, string carrera)
+        {
+            string[] columnas = { 
+                "E.ID as ID", 
+                "E.codigo AS Codigo",
+                "E.grado AS Grado",
+                "E.ci AS CI",
+                "E.nombre AS Nombre", 
+                "E.apellidoPaterno AS Paterno", 
+                "E.apellidoMaterno AS Materno",
+                "C.nombre as Carrera"
+            };
+            string[] tablas = { "oficiales AS E", "carreras AS C" };
+            Dictionary<string, string[]> filtro = new Dictionary<string, string[]>();
+            filtro.Add("E.carrera", new string[] { "=", "C.ID", "AND" });
+            filtro.Add("E.codigo", new string[] { " LIKE", string.Format("'%{0}%'", codigo), "AND" });
+            filtro.Add("E.grado", new string[] { " LIKE", string.Format("'%{0}%'", grado), "AND" });
+            filtro.Add("E.ci", new string[] { " LIKE", string.Format("'%{0}%'", ci), "AND" });
+            filtro.Add("(E.nombre + ' ' + E.apellidoPaterno + ' ' + E.apellidoMaterno)", new string[] { " LIKE", string.Format("'%{0}%'", nombre), "AND" });
+            filtro.Add("C.nombre", new string[] { " LIKE", string.Format("'%{0}%'", carrera), "" });
 
             return Modelos.Consultas.Server.select(columnas, tablas, filtro);
         }
@@ -83,25 +114,30 @@ namespace Disciplina.Controladores
             return this.getDatosOficial(columnas, tablas, filtro);
         }
 
+        private Dictionary<string, string> returnCarreras()
+        {
+            DataTable carrerasTable = this.carrera.getCarreras();
+            Dictionary<string, string> carreras = new Dictionary<string, string>();
+
+            carreras.Add("", "");
+            foreach (DataRow fila in carrerasTable.Rows)
+            {
+                carreras.Add(fila["ID"].ToString(), fila["Nombre"].ToString());
+            }
+
+            return carreras;
+        }
+
         public void oficiales()
         {
             DataTable listOficiales = this.getOficiales();
-            Form vista = new Vistas.Oficiales.Principal(listOficiales);
+            Form vista = new Vistas.Oficiales.Principal(listOficiales, this.returnCarreras());
             this.resolver(vista);
         }
 
         public void registrar()
         {
-            Controladores.Carrera carreraController = new Controladores.Carrera();
-            DataTable carreras = carreraController.getCarreras();
-
-            Dictionary<string, string> carrerasEmi = new Dictionary<string, string>();
-            foreach (DataRow carrera in carreras.Rows)
-            {
-                carrerasEmi.Add(carrera["ID"].ToString(), carrera["nombre"].ToString());
-            }
-
-            Form vista = new Vistas.Oficiales.Registrar(carrerasEmi, "registrar", null);
+            Form vista = new Vistas.Oficiales.Registrar(this.returnCarreras(), "registrar", null);
             this.resolver(vista);
         }
 
@@ -120,16 +156,7 @@ namespace Disciplina.Controladores
 
         public void actualizar(string idOficial)
         {
-            Controladores.Carrera carreraController = new Controladores.Carrera();
-            DataTable carreras = carreraController.getCarreras();
-
-            Dictionary<string, string> carrerasEmi = new Dictionary<string, string>();
-            foreach (DataRow carrera in carreras.Rows)
-            {
-                carrerasEmi.Add(carrera["ID"].ToString(), carrera["nombre"].ToString());
-            }
-
-            Form vista = new Vistas.Oficiales.Registrar(carrerasEmi, "actualizar", this.getOficial(idOficial));
+            Form vista = new Vistas.Oficiales.Registrar(this.returnCarreras(), "actualizar", this.getOficial(idOficial));
             this.resolver(vista);
         }
     }

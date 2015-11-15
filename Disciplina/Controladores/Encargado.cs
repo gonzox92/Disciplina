@@ -42,7 +42,7 @@ namespace Disciplina.Controladores
             Dictionary<string, string[]> filtro = new Dictionary<string, string[]>();
             filtro.Add("privilegio", new string[] { "!=", "'estudiante'", "AND" });
             filtro.Add(" privilegio", new string[] { "!=", "'Oficial'", "AND" });
-            filtro.Add("nombre", new string[] { " LIKE", string.Format("'%{0}%'", nombre), "AND" });
+            filtro.Add("(nombre + ' ' + apellidoPaterno + ' ' + apellidoMaterno)", new string[] { " LIKE", string.Format("'%{0}%'", nombre), "AND" });
             filtro.Add("usuario", new string[] { " LIKE", string.Format("'%{0}%'", usuario), "AND" });
             filtro.Add("  privilegio", new string[] { " LIKE", string.Format("'%{0}%'", privilegio), "" });
 

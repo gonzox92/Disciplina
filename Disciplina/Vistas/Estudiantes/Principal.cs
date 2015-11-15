@@ -14,17 +14,23 @@ namespace Disciplina.Vistas.Estudiantes
     {
         private DataTable estudiantes;
         private Controladores.Estudiante controller;
+        private Dictionary<string, string> carreras;
 
-        public Principal(DataTable estudiantes)
+        public Principal(DataTable estudiantes, Dictionary<string, string> carreras)
         {
             InitializeComponent();
             this.estudiantes = estudiantes;
             this.controller = new Controladores.Estudiante();
+            this.carreras = carreras;
         }
 
         private void Principal_Load(object sender, EventArgs e)
         {
             this.dataEstudiantes.DataSource = this.estudiantes;
+            this.txtYear.Value = DateTime.Now.Year;
+            this.txtCarrera.DataSource = new BindingSource(this.carreras, null);
+            this.txtCarrera.ValueMember = "Key";
+            this.txtCarrera.DisplayMember = "Value";
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
@@ -63,6 +69,36 @@ namespace Disciplina.Vistas.Estudiantes
             this.controller.actualizar(idEstudiante);
 
             this.dataEstudiantes.DataSource = this.controller.getEstudiantes();
+        }
+
+        private void filterEstudiante()
+        {
+            string codigo = this.txtCodigo.Text;
+            string ci = this.txtCI.Text;
+            string nombre = this.txtNombre.Text;
+            string carrera = this.txtCarrera.Text;
+
+            this.dataEstudiantes.DataSource = this.controller.filterEstudiantes(codigo, ci, nombre, carrera);
+        }
+
+        private void txtCodigo_TextChanged(object sender, EventArgs e)
+        {
+            this.filterEstudiante();
+        }
+
+        private void txtCI_TextChanged(object sender, EventArgs e)
+        {
+            this.filterEstudiante();
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+            this.filterEstudiante();
+        }
+
+        private void txtCarrera_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this.filterEstudiante();
         }
     }
 }

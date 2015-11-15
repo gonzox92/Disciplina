@@ -10,6 +10,13 @@ namespace Disciplina.Controladores
 {
     class Estudiante : Controller
     {
+        private Carrera carrera;
+
+        public Estudiante()
+        {
+            this.carrera = new Carrera();
+        }
+
         public DataTable getEstudiantes()
         {
             string[] columnas = { 
@@ -26,6 +33,28 @@ namespace Disciplina.Controladores
             filtro.Add("E.carrera", new string[] { "=", "C.ID", "" });
 
             return Modelos.Consultas.Server.select(columnas, tablas, filtro);
+        }
+
+        public DataTable filterEstudiantes(string codigo, string ci, string nombre, string carrera)
+        {
+            string[] columnas = { 
+                "E.ID as ID", 
+                "E.codigo AS Codigo",
+                "E.ci AS CI",
+                "E.nombre AS Nombre", 
+                "E.apellidoPaterno AS Paterno", 
+                "E.apellidoMaterno AS Materno",
+                "C.nombre as Carrera"
+            };
+            string[] tablas = { "estudiantes AS E", "carreras AS C" };
+            Dictionary<string, string[]> filtro = new Dictionary<string, string[]>();
+            filtro.Add("E.carrera", new string[] { "=", "C.ID", "AND" });
+            filtro.Add("E.codigo", new string[] { " LIKE", string.Format("'%{0}%'", codigo), "AND" });
+            filtro.Add("E.ci", new string[] { " LIKE", string.Format("'%{0}%'", ci), "AND" });
+            filtro.Add("(E.nombre + ' ' + E.apellidoPaterno + ' ' + E.apellidoMaterno)", new string[] { " LIKE", string.Format("'%{0}%'", nombre), "AND" });
+            filtro.Add("C.nombre", new string[] { " LIKE", string.Format("'%{0}%'", carrera), "" });
+
+            return Modelos.Consultas.Server.selectDistinct(columnas, tablas, filtro);
         }
 
         public Dictionary<string, string> getDetallesAlumnoPorCurso(string idEstudiante, string idCurso)
@@ -171,10 +200,23 @@ namespace Disciplina.Controladores
             return this.getDatosEstudiante(columnas, tablas, filtro);
         }
 
+        private Dictionary<string, string> returnCarreras()
+        {
+            DataTable carrerasTable = this.carrera.getCarreras();
+            Dictionary<string, string> carreras = new Dictionary<string, string>();
+
+            carreras.Add("", "");
+            foreach (DataRow fila in carrerasTable.Rows)
+            {
+                carreras.Add(fila["ID"].ToString(), fila["Nombre"].ToString());
+            }
+
+            return carreras;
+        }
+
         public void estudiantes()
         {
-            DataTable estudiantes = this.getEstudiantes();
-            Form vista = new Vistas.Estudiantes.Principal(estudiantes);
+            Form vista = new Vistas.Estudiantes.Principal(null, this.returnCarreras());
             this.resolver(vista);
         }
 
