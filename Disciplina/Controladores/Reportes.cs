@@ -39,10 +39,24 @@ namespace Disciplina.Controladores
             this.resolver(cursos);
         }
 
+        private Dictionary<string, string> returnCarreras()
+        {
+            DataTable carrerasTable = this.carrera.getCarreras();
+            Dictionary<string, string> carreras = new Dictionary<string, string>();
+
+            carreras.Add("", "");
+            foreach (DataRow fila in carrerasTable.Rows)
+            {
+                carreras.Add(fila["ID"].ToString(), fila["Nombre"].ToString());
+            }
+
+            return carreras;
+        }
+
         public void listaEstudiantes()
         {
             DataTable estudiantes = this.estudiante.getEstudiantes();
-            Form lista = new Vistas.Reportes.ListaEstudiantes(estudiantes);
+            Form lista = new Vistas.Reportes.ListaEstudiantes(null, this.returnCarreras());
             this.resolver(lista);
         }
 

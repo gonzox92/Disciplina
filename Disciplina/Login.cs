@@ -83,6 +83,9 @@ namespace Disciplina
                     this.reportes.faltasEstudiante(datos);
                 }
                 this.Visible = true;
+                this.txtUsuario.Text = "";
+                this.txtPassword.Text = "";
+                this.txtUsuario.Focus();
             }
             else
             {
