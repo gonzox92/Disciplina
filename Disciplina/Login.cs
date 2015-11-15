@@ -49,6 +49,8 @@ namespace Disciplina
             if (acceso != "denegado")
             {
                 this.Visible = false;
+                Configuracion.Cuenta.usuario = this.txtUsuario.Text;
+
                 if (acceso == "Encargado de disciplina")
                 {
                     Form Encargado = new Vistas.Encargado.Principal();

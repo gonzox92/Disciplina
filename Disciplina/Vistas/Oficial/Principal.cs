@@ -38,5 +38,10 @@ namespace Disciplina.Vistas.Oficial
         {
             this.faltasEstudiante.principal();
         }
+
+        private void cambiarPasswordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.falta.actualizarCuenta();
+        }
     }
 }

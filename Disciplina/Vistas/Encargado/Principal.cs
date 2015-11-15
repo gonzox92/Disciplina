@@ -40,43 +40,36 @@ namespace Disciplina.Vistas.Encargado
 
         private void btnAdminCuentas_Click(object sender, EventArgs e)
         {
-            //this.Visible = false;
             this.controlador.cuentas();
         }
 
         private void btnCarreras_Click(object sender, EventArgs e)
         {
-            //this.Visible = false;
             this.carrera.carreras();
         }
 
         private void btnCursos_Click(object sender, EventArgs e)
         {
-            //this.Visible = false;
             this.curso.cursos();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //this.Visible = false;
             this.estudiante.estudiantes();
         }
 
         private void btnAdminFaltas_Click(object sender, EventArgs e)
         {
-            //this.Visible = false;
             this.falta.faltas();
         }
 
         private void btnCursosEstudiantes_Click(object sender, EventArgs e)
         {
-            //this.Visible = false;
             this.cursoEstudiante.registrar();
         }
 
         private void btnEstudiantesFaltas_Click(object sender, EventArgs e)
         {
-            //this.Visible = false;
             this.faltasEstudiante.principal();
         }
 
@@ -88,6 +81,11 @@ namespace Disciplina.Vistas.Encargado
         private void btnOficiales_Click(object sender, EventArgs e)
         {
             this.oficial.oficiales();
+        }
+
+        private void cambiarPasswordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.controlador.actualizarCuenta();
         }
     }
 }

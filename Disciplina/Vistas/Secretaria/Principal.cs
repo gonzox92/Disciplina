@@ -45,5 +45,10 @@ namespace Disciplina.Vistas.Secretaria
         {
             this.estudiante.estudiantes();
         }
+
+        private void cambiarPasswordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.carrera.actualizarCuenta();
+        }
     }
 }

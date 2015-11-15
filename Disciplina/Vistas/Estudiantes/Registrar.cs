@@ -80,7 +80,8 @@ namespace Disciplina.Vistas.Estudiantes
                 this.txtTelefono.Text,
                 this.txtDireccion.Text);
 
-            Modelos.IModelo cuenta = new Modelos.Usuario("", "", "", this.txtCodigo.Text, this.txtCodigo.Text, "estudiante");
+            Modelos.IModelo cuenta = new Modelos.Usuario(
+                this.txtNombre.Text, this.txtApellidoPaterno.Text, this.txtApellidoMaterno.Text, this.txtCodigo.Text, this.txtCodigo.Text, "estudiante");
 
             if (controller.registrar(estudiante) && usuario.registrar(cuenta))
             {

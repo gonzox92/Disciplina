@@ -32,6 +32,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupMain = new System.Windows.Forms.GroupBox();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.btnOficiales = new System.Windows.Forms.Button();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.btnEstudiantesFaltas = new System.Windows.Forms.Button();
@@ -67,12 +71,13 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.btnOficiales = new System.Windows.Forms.Button();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.label10 = new System.Windows.Forms.Label();
+            this.menuPrincipal = new System.Windows.Forms.MenuStrip();
+            this.cuentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cambiarPasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupMain.SuspendLayout();
+            this.groupBox9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             this.groupBox8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.groupBox7.SuspendLayout();
@@ -90,8 +95,7 @@
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.groupBox9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            this.menuPrincipal.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -99,7 +103,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label1.Location = new System.Drawing.Point(76, 39);
+            this.label1.Location = new System.Drawing.Point(72, 54);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(203, 20);
@@ -135,6 +139,52 @@
             this.groupMain.Size = new System.Drawing.Size(1110, 491);
             this.groupMain.TabIndex = 3;
             this.groupMain.TabStop = false;
+            // 
+            // groupBox9
+            // 
+            this.groupBox9.Controls.Add(this.btnOficiales);
+            this.groupBox9.Controls.Add(this.pictureBox11);
+            this.groupBox9.Controls.Add(this.label10);
+            this.groupBox9.Location = new System.Drawing.Point(754, 43);
+            this.groupBox9.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox9.Size = new System.Drawing.Size(323, 120);
+            this.groupBox9.TabIndex = 6;
+            this.groupBox9.TabStop = false;
+            // 
+            // btnOficiales
+            // 
+            this.btnOficiales.Location = new System.Drawing.Point(113, 55);
+            this.btnOficiales.Margin = new System.Windows.Forms.Padding(2);
+            this.btnOficiales.Name = "btnOficiales";
+            this.btnOficiales.Size = new System.Drawing.Size(122, 35);
+            this.btnOficiales.TabIndex = 2;
+            this.btnOficiales.Text = "Aceptar";
+            this.btnOficiales.UseVisualStyleBackColor = true;
+            this.btnOficiales.Click += new System.EventHandler(this.btnOficiales_Click);
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
+            this.pictureBox11.Location = new System.Drawing.Point(32, 32);
+            this.pictureBox11.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(48, 52);
+            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox11.TabIndex = 1;
+            this.pictureBox11.TabStop = false;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(115, 32);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(122, 13);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "Administrar Oficiales";
             // 
             // groupBox8
             // 
@@ -507,7 +557,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(28, 28);
+            this.pictureBox2.Location = new System.Drawing.Point(24, 43);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(44, 46);
@@ -533,51 +583,30 @@
             this.panel2.Size = new System.Drawing.Size(628, 10);
             this.panel2.TabIndex = 7;
             // 
-            // groupBox9
+            // menuPrincipal
             // 
-            this.groupBox9.Controls.Add(this.btnOficiales);
-            this.groupBox9.Controls.Add(this.pictureBox11);
-            this.groupBox9.Controls.Add(this.label10);
-            this.groupBox9.Location = new System.Drawing.Point(754, 43);
-            this.groupBox9.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox9.Size = new System.Drawing.Size(323, 120);
-            this.groupBox9.TabIndex = 6;
-            this.groupBox9.TabStop = false;
+            this.menuPrincipal.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cuentaToolStripMenuItem});
+            this.menuPrincipal.Location = new System.Drawing.Point(0, 0);
+            this.menuPrincipal.Name = "menuPrincipal";
+            this.menuPrincipal.Size = new System.Drawing.Size(1158, 24);
+            this.menuPrincipal.TabIndex = 8;
+            this.menuPrincipal.Text = "menuStrip1";
             // 
-            // btnOficiales
+            // cuentaToolStripMenuItem
             // 
-            this.btnOficiales.Location = new System.Drawing.Point(113, 55);
-            this.btnOficiales.Margin = new System.Windows.Forms.Padding(2);
-            this.btnOficiales.Name = "btnOficiales";
-            this.btnOficiales.Size = new System.Drawing.Size(122, 35);
-            this.btnOficiales.TabIndex = 2;
-            this.btnOficiales.Text = "Aceptar";
-            this.btnOficiales.UseVisualStyleBackColor = true;
-            this.btnOficiales.Click += new System.EventHandler(this.btnOficiales_Click);
+            this.cuentaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cambiarPasswordToolStripMenuItem});
+            this.cuentaToolStripMenuItem.Name = "cuentaToolStripMenuItem";
+            this.cuentaToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
+            this.cuentaToolStripMenuItem.Text = "Cuenta";
             // 
-            // pictureBox11
+            // cambiarPasswordToolStripMenuItem
             // 
-            this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
-            this.pictureBox11.Location = new System.Drawing.Point(32, 32);
-            this.pictureBox11.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(48, 52);
-            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox11.TabIndex = 1;
-            this.pictureBox11.TabStop = false;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(115, 32);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(122, 13);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "Administrar Oficiales";
+            this.cambiarPasswordToolStripMenuItem.Name = "cambiarPasswordToolStripMenuItem";
+            this.cambiarPasswordToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.cambiarPasswordToolStripMenuItem.Text = "Cambiar password";
+            this.cambiarPasswordToolStripMenuItem.Click += new System.EventHandler(this.cambiarPasswordToolStripMenuItem_Click);
             // 
             // Principal
             // 
@@ -591,9 +620,11 @@
             this.Controls.Add(this.groupMain);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.menuPrincipal);
             this.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MainMenuStrip = this.menuPrincipal;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -601,6 +632,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupMain.ResumeLayout(false);
+            this.groupBox9.ResumeLayout(false);
+            this.groupBox9.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
@@ -626,9 +660,8 @@
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.groupBox9.ResumeLayout(false);
-            this.groupBox9.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            this.menuPrincipal.ResumeLayout(false);
+            this.menuPrincipal.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -678,5 +711,8 @@
         private System.Windows.Forms.Button btnOficiales;
         private System.Windows.Forms.PictureBox pictureBox11;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.MenuStrip menuPrincipal;
+        private System.Windows.Forms.ToolStripMenuItem cuentaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cambiarPasswordToolStripMenuItem;
     }
 }

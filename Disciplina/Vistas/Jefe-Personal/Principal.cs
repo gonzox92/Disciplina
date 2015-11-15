@@ -12,16 +12,21 @@ namespace Disciplina.Vistas.Jefe_Personal
 {
     public partial class Principal : Form
     {
-        private Controladores.Encargado controlador;
+        private Controladores.EstudianteOficial oficial;
         public Principal()
         {
             InitializeComponent();
-            this.controlador = new Controladores.Encargado();
+            this.oficial = new Controladores.EstudianteOficial();
         }
 
-        private void btnAdminCuentas_Click(object sender, EventArgs e)
+        private void btnOficiales_Click(object sender, EventArgs e)
         {
-            this.controlador.cuentas();
+            this.oficial.oficiales();
+        }
+
+        private void cambiarPasswordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.oficial.actualizarCuenta();
         }
     }
 }

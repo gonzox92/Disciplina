@@ -20,5 +20,11 @@ namespace Disciplina.Controladores
         {
             return Modelos.Consultas.Server.update(tabla, datos, llaves);
         }
+
+        public void actualizarCuenta()
+        {
+            Form updateCuenta = new Vistas.Comunes.CambiarPassword();
+            this.resolver(updateCuenta);
+        }
     }
 }

@@ -54,3 +54,4 @@ C:\Users\Gonzalo\Desktop\Disciplina\Disciplina\obj\Debug\Disciplina.Vistas.Jefe_
 C:\Users\Gonzalo\Desktop\Disciplina\Disciplina\obj\Debug\Disciplina.Vistas.Secretaria.Principal.resources
 C:\Users\Gonzalo\Desktop\Disciplina\Disciplina\obj\Debug\Disciplina.Vistas.Oficiales.Registrar.resources
 C:\Users\Gonzalo\Desktop\Disciplina\Disciplina\obj\Debug\Disciplina.Vistas.Oficiales.Principal.resources
+C:\Users\Gonzalo\Desktop\Disciplina\Disciplina\obj\Debug\Disciplina.Vistas.Comunes.CambiarPassword.resources

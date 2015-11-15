@@ -72,7 +72,8 @@ namespace Disciplina.Vistas.Oficiales
                 this.txtApellidoMaterno.Text, this.txtCodigo.Text, this.txtDireccion.Text, this.txtTelefono.Text,
                 ((KeyValuePair<string, string>)this.txtCarrera.SelectedItem).Key, this.txtCI.Text);
 
-            Modelos.IModelo cuenta = new Modelos.Usuario("", "", "", this.txtCodigo.Text, this.txtCodigo.Text, "Oficial");
+            Modelos.IModelo cuenta = new Modelos.Usuario(
+                this.txtNombre.Text, this.txtApellidoPaterno.Text, this.txtApellidoMaterno.Text, this.txtCodigo.Text, this.txtCodigo.Text, "Oficial");
 
             if (controller.registrar(estudianteOficial) && usuario.registrar(cuenta))
             {

@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Configuracion\Conexion.cs" />
+    <Compile Include="Configuracion\Cuenta.cs" />
     <Compile Include="Controladores\Carrera.cs" />
     <Compile Include="Controladores\Controller.cs" />
     <Compile Include="Controladores\Curso.cs" />
@@ -94,6 +95,12 @@
     </Compile>
     <Compile Include="Vistas\Carreras\Registrar.Designer.cs">
       <DependentUpon>Registrar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Comunes\CambiarPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Comunes\CambiarPassword.Designer.cs">
+      <DependentUpon>CambiarPassword.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Comunes\Cuentas.cs">
       <SubType>Form</SubType>
@@ -257,6 +264,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Carreras\Registrar.resx">
       <DependentUpon>Registrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Comunes\CambiarPassword.resx">
+      <DependentUpon>CambiarPassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Comunes\Cuentas.resx">
       <DependentUpon>Cuentas.cs</DependentUpon>

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Estudiante));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.labelTotal = new System.Windows.Forms.Label();
@@ -49,6 +49,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.menuPrincipal = new System.Windows.Forms.MenuStrip();
+            this.cuentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cambiarPasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tableFaltas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -57,6 +60,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.menuPrincipal.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -64,7 +68,7 @@
             this.groupBox1.Controls.Add(this.labelTotal);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.tableFaltas);
-            this.groupBox1.Location = new System.Drawing.Point(26, 218);
+            this.groupBox1.Location = new System.Drawing.Point(26, 236);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(634, 390);
             this.groupBox1.TabIndex = 0;
@@ -97,14 +101,14 @@
             this.tableFaltas.AllowUserToResizeRows = false;
             this.tableFaltas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.tableFaltas.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tableFaltas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tableFaltas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.tableFaltas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tableFaltas.GridColor = System.Drawing.Color.White;
             this.tableFaltas.Location = new System.Drawing.Point(27, 22);
@@ -120,7 +124,7 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(550, 11);
+            this.pictureBox5.Location = new System.Drawing.Point(550, 33);
             this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(110, 46);
@@ -139,7 +143,7 @@
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Location = new System.Drawing.Point(26, 65);
+            this.groupBox2.Location = new System.Drawing.Point(26, 88);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(634, 147);
             this.groupBox2.TabIndex = 32;
@@ -239,7 +243,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Gold;
-            this.panel2.Location = new System.Drawing.Point(343, 627);
+            this.panel2.Location = new System.Drawing.Point(343, 642);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(488, 13);
@@ -248,7 +252,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.panel1.Location = new System.Drawing.Point(-141, 627);
+            this.panel1.Location = new System.Drawing.Point(-141, 642);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(488, 13);
@@ -257,7 +261,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(28, 10);
+            this.pictureBox4.Location = new System.Drawing.Point(28, 33);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(44, 46);
@@ -270,19 +274,45 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label7.Location = new System.Drawing.Point(77, 22);
+            this.label7.Location = new System.Drawing.Point(77, 45);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(96, 20);
             this.label7.TabIndex = 35;
             this.label7.Text = "Estudiante";
             // 
+            // menuPrincipal
+            // 
+            this.menuPrincipal.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cuentaToolStripMenuItem});
+            this.menuPrincipal.Location = new System.Drawing.Point(0, 0);
+            this.menuPrincipal.Name = "menuPrincipal";
+            this.menuPrincipal.Size = new System.Drawing.Size(685, 24);
+            this.menuPrincipal.TabIndex = 37;
+            this.menuPrincipal.Text = "menuStrip1";
+            // 
+            // cuentaToolStripMenuItem
+            // 
+            this.cuentaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cambiarPasswordToolStripMenuItem});
+            this.cuentaToolStripMenuItem.Name = "cuentaToolStripMenuItem";
+            this.cuentaToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
+            this.cuentaToolStripMenuItem.Text = "Cuenta";
+            // 
+            // cambiarPasswordToolStripMenuItem
+            // 
+            this.cambiarPasswordToolStripMenuItem.Name = "cambiarPasswordToolStripMenuItem";
+            this.cambiarPasswordToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.cambiarPasswordToolStripMenuItem.Text = "Cambiar password";
+            this.cambiarPasswordToolStripMenuItem.Click += new System.EventHandler(this.cambiarPasswordToolStripMenuItem_Click);
+            // 
             // Estudiante
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(685, 635);
+            this.ClientSize = new System.Drawing.Size(685, 651);
+            this.Controls.Add(this.menuPrincipal);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.panel2);
@@ -307,6 +337,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.menuPrincipal.ResumeLayout(false);
+            this.menuPrincipal.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -333,5 +365,8 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.MenuStrip menuPrincipal;
+        private System.Windows.Forms.ToolStripMenuItem cuentaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cambiarPasswordToolStripMenuItem;
     }
 }

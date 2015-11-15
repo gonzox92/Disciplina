@@ -68,5 +68,10 @@ namespace Disciplina.Vistas.Reportes
         {
             this.loadFaltas();
         }
+
+        private void cambiarPasswordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.faltasEstudiante.actualizarCuenta();
+        }
     }
 }
