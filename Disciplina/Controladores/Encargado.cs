@@ -22,7 +22,29 @@ namespace Disciplina.Controladores
             };
             string[] tablas = { "usuarios" };
             Dictionary<string, string[]> filtro = new Dictionary<string, string[]>();
-            filtro.Add("privilegio", new string[] { "!=", "'estudiante'", "" });
+            filtro.Add("privilegio", new string[] { "!=", "'estudiante'", "AND" });
+            filtro.Add(" privilegio", new string[] { "!=", "'Oficial'", "" });
+
+            return Modelos.Consultas.Server.select(columnas, tablas, filtro);
+        }
+
+        public DataTable filterCuentas(string nombre, string usuario, string privilegio)
+        {
+            string[] columnas = { 
+                "ID", 
+                "nombre AS Nombre", 
+                "apellidoPaterno AS Paterno", 
+                "apellidoMaterno AS Materno", 
+                "usuario AS Usuario", 
+                "privilegio AS Privilegio" 
+            };
+            string[] tablas = { "usuarios" };
+            Dictionary<string, string[]> filtro = new Dictionary<string, string[]>();
+            filtro.Add("privilegio", new string[] { "!=", "'estudiante'", "AND" });
+            filtro.Add(" privilegio", new string[] { "!=", "'Oficial'", "AND" });
+            filtro.Add("nombre", new string[] { " LIKE", string.Format("'%{0}%'", nombre), "AND" });
+            filtro.Add("usuario", new string[] { " LIKE", string.Format("'%{0}%'", usuario), "AND" });
+            filtro.Add("  privilegio", new string[] { " LIKE", string.Format("'%{0}%'", privilegio), "" });
 
             return Modelos.Consultas.Server.select(columnas, tablas, filtro);
         }

@@ -50,5 +50,34 @@ namespace Disciplina.Vistas.Comunes
                 this.dataCuentas.DataSource = this.controller.getCuentas();
             }
         }
+
+        private void filterCuentas()
+        {
+            string nombre = this.txtNombre.Text;
+            string usuario = this.txtUsuario.Text;
+            string privilegio = this.txtPrivilegio.Text;
+
+            this.dataCuentas.DataSource = this.controller.filterCuentas(nombre, usuario, privilegio);
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            this.filterCuentas();
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+            this.filterCuentas();
+        }
+
+        private void txtUsuario_TextChanged(object sender, EventArgs e)
+        {
+            this.filterCuentas();
+        }
+
+        private void txtPrivilegio_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this.filterCuentas();
+        }
     }
 }
