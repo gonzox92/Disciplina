@@ -58,6 +58,7 @@
     <Compile Include="Controladores\CursoEstudiantes.cs" />
     <Compile Include="Controladores\Encargado.cs" />
     <Compile Include="Controladores\Estudiante.cs" />
+    <Compile Include="Controladores\EstudianteOficial.cs" />
     <Compile Include="Controladores\Falta.cs" />
     <Compile Include="Controladores\FaltasEstudiantes.cs" />
     <Compile Include="Controladores\Reportes.cs" />
@@ -71,6 +72,7 @@
     <Compile Include="Modelos\Carrera.cs" />
     <Compile Include="Modelos\CursoEstudiante.cs" />
     <Compile Include="Modelos\Estudiante.cs" />
+    <Compile Include="Modelos\EstudianteOficial.cs" />
     <Compile Include="Modelos\Falta.cs" />
     <Compile Include="Modelos\FaltaEstudiante.cs" />
     <Compile Include="Modelos\IModelo.cs" />
@@ -183,6 +185,18 @@
     <Compile Include="Vistas\Jefe-Personal\Principal.Designer.cs">
       <DependentUpon>Principal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\Oficiales\Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Oficiales\Principal.Designer.cs">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Oficiales\Registrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Oficiales\Registrar.Designer.cs">
+      <DependentUpon>Registrar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Oficial\Principal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -288,6 +302,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Jefe-Personal\Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Oficiales\Principal.resx">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Oficiales\Registrar.resx">
+      <DependentUpon>Registrar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Oficial\Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>

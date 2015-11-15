@@ -17,6 +17,7 @@ namespace Disciplina.Vistas.Encargado
         private Controladores.Carrera carrera;
         private Controladores.Curso curso;
         private Controladores.Estudiante estudiante;
+        private Controladores.EstudianteOficial oficial;
         private Controladores.Falta falta;
         private Controladores.CursoEstudiantes cursoEstudiante;
         private Controladores.FaltasEstudiantes faltasEstudiante;
@@ -30,6 +31,7 @@ namespace Disciplina.Vistas.Encargado
             this.carrera = new Controladores.Carrera();
             this.curso = new Controladores.Curso();
             this.estudiante = new Controladores.Estudiante();
+            this.oficial = new Controladores.EstudianteOficial();
             this.falta = new Controladores.Falta();
             this.cursoEstudiante = new Controladores.CursoEstudiantes();
             this.faltasEstudiante = new Controladores.FaltasEstudiantes();
@@ -81,6 +83,11 @@ namespace Disciplina.Vistas.Encargado
         private void btnAdminConsultas_Click(object sender, EventArgs e)
         {
             this.reportes.opciones();
+        }
+
+        private void btnOficiales_Click(object sender, EventArgs e)
+        {
+            this.oficial.oficiales();
         }
     }
 }

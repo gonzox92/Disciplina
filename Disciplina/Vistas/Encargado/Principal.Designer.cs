@@ -67,6 +67,10 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.btnOficiales = new System.Windows.Forms.Button();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupMain.SuspendLayout();
             this.groupBox8.SuspendLayout();
@@ -86,6 +90,8 @@
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.groupBox9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -113,6 +119,7 @@
             // 
             // groupMain
             // 
+            this.groupMain.Controls.Add(this.groupBox9);
             this.groupMain.Controls.Add(this.groupBox8);
             this.groupMain.Controls.Add(this.groupBox7);
             this.groupMain.Controls.Add(this.groupBox6);
@@ -134,7 +141,7 @@
             this.groupBox8.Controls.Add(this.pictureBox10);
             this.groupBox8.Controls.Add(this.btnEstudiantesFaltas);
             this.groupBox8.Controls.Add(this.label9);
-            this.groupBox8.Location = new System.Drawing.Point(751, 185);
+            this.groupBox8.Location = new System.Drawing.Point(754, 327);
             this.groupBox8.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Padding = new System.Windows.Forms.Padding(2);
@@ -180,7 +187,7 @@
             this.groupBox7.Controls.Add(this.pictureBox9);
             this.groupBox7.Controls.Add(this.btnCursosEstudiantes);
             this.groupBox7.Controls.Add(this.label8);
-            this.groupBox7.Location = new System.Drawing.Point(751, 43);
+            this.groupBox7.Location = new System.Drawing.Point(754, 185);
             this.groupBox7.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Padding = new System.Windows.Forms.Padding(2);
@@ -526,6 +533,52 @@
             this.panel2.Size = new System.Drawing.Size(628, 10);
             this.panel2.TabIndex = 7;
             // 
+            // groupBox9
+            // 
+            this.groupBox9.Controls.Add(this.btnOficiales);
+            this.groupBox9.Controls.Add(this.pictureBox11);
+            this.groupBox9.Controls.Add(this.label10);
+            this.groupBox9.Location = new System.Drawing.Point(754, 43);
+            this.groupBox9.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox9.Size = new System.Drawing.Size(323, 120);
+            this.groupBox9.TabIndex = 6;
+            this.groupBox9.TabStop = false;
+            // 
+            // btnOficiales
+            // 
+            this.btnOficiales.Location = new System.Drawing.Point(113, 55);
+            this.btnOficiales.Margin = new System.Windows.Forms.Padding(2);
+            this.btnOficiales.Name = "btnOficiales";
+            this.btnOficiales.Size = new System.Drawing.Size(122, 35);
+            this.btnOficiales.TabIndex = 2;
+            this.btnOficiales.Text = "Aceptar";
+            this.btnOficiales.UseVisualStyleBackColor = true;
+            this.btnOficiales.Click += new System.EventHandler(this.btnOficiales_Click);
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
+            this.pictureBox11.Location = new System.Drawing.Point(32, 32);
+            this.pictureBox11.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(48, 52);
+            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox11.TabIndex = 1;
+            this.pictureBox11.TabStop = false;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(115, 32);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(122, 13);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "Administrar Oficiales";
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -573,6 +626,9 @@
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.groupBox9.ResumeLayout(false);
+            this.groupBox9.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -618,5 +674,9 @@
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.Button btnEstudiantesFaltas;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.GroupBox groupBox9;
+        private System.Windows.Forms.Button btnOficiales;
+        private System.Windows.Forms.PictureBox pictureBox11;
+        private System.Windows.Forms.Label label10;
     }
 }

@@ -98,8 +98,8 @@ namespace Disciplina.Modelos.Consultas
             }
             catch (SqlException e)
             {
-                MessageBox.Show("Error en la consulta");
-                //MessageBox.Show(string.Format("SELECT {0} FROM {1} WHERE {2}", columnas, tablas, valores));
+                //MessageBox.Show("Error en la consulta");
+                MessageBox.Show(string.Format("SELECT {0} FROM {1} WHERE {2}", columnas, tablas, valores));
                 return null;
             }
         }

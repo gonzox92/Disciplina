@@ -168,7 +168,6 @@
             this.txtPrivilegio.FormattingEnabled = true;
             this.txtPrivilegio.Items.AddRange(new object[] {
             "Encargado de disciplina",
-            "Oficial",
             "Jefe de Personal",
             "Secretaria"});
             this.txtPrivilegio.Location = new System.Drawing.Point(61, 28);
