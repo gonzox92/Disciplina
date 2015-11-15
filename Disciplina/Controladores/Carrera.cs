@@ -61,8 +61,8 @@ namespace Disciplina.Controladores
 
         public void carreras()
         {
-            DataTable cuentas = this.getCarreras();
-            Form vista = new Vistas.Carreras.Principal(cuentas);
+            DataTable carreras = this.getCarreras();
+            Form vista = new Vistas.Carreras.Principal(carreras);
             this.resolver(vista);
         }
 

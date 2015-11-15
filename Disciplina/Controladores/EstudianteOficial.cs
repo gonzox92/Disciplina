@@ -130,8 +130,7 @@ namespace Disciplina.Controladores
 
         public void oficiales()
         {
-            DataTable listOficiales = this.getOficiales();
-            Form vista = new Vistas.Oficiales.Principal(listOficiales, this.returnCarreras());
+            Form vista = new Vistas.Oficiales.Principal(null, this.returnCarreras());
             this.resolver(vista);
         }
 

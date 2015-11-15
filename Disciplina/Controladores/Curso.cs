@@ -109,8 +109,7 @@ namespace Disciplina.Controladores
 
         public void cursos()
         {
-            DataTable cursos = this.getCursos();
-            Form vista = new Vistas.Cursos.Principal(cursos, this.returnCarreras());
+            Form vista = new Vistas.Cursos.Principal(null, this.returnCarreras());
             this.resolver(vista);
         }
 

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
@@ -84,7 +84,7 @@
             // 
             this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(566, 457);
+            this.btnEliminar.Location = new System.Drawing.Point(558, 457);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(124, 36);
@@ -127,14 +127,14 @@
             this.dataEstudiantes.AllowUserToResizeRows = false;
             this.dataEstudiantes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataEstudiantes.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataEstudiantes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataEstudiantes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataEstudiantes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataEstudiantes.GridColor = System.Drawing.Color.White;
             this.dataEstudiantes.Location = new System.Drawing.Point(16, 28);
@@ -296,6 +296,7 @@
             this.btnBuscar.Size = new System.Drawing.Size(47, 31);
             this.btnBuscar.TabIndex = 20;
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // txtCurso
             // 
@@ -317,6 +318,7 @@
             this.txtCurso.Name = "txtCurso";
             this.txtCurso.Size = new System.Drawing.Size(179, 21);
             this.txtCurso.TabIndex = 36;
+            this.txtCurso.SelectedIndexChanged += new System.EventHandler(this.txtCurso_SelectedIndexChanged);
             // 
             // txtPeriodo
             // 
@@ -330,6 +332,7 @@
             this.txtPeriodo.Name = "txtPeriodo";
             this.txtPeriodo.Size = new System.Drawing.Size(48, 21);
             this.txtPeriodo.TabIndex = 34;
+            this.txtPeriodo.SelectedIndexChanged += new System.EventHandler(this.txtPeriodo_SelectedIndexChanged);
             // 
             // txtParalelo
             // 
@@ -354,6 +357,7 @@
             this.txtParalelo.Name = "txtParalelo";
             this.txtParalelo.Size = new System.Drawing.Size(41, 21);
             this.txtParalelo.TabIndex = 35;
+            this.txtParalelo.SelectedIndexChanged += new System.EventHandler(this.txtParalelo_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -394,6 +398,7 @@
             0,
             0,
             0});
+            this.txtYear.ValueChanged += new System.EventHandler(this.txtYear_ValueChanged);
             // 
             // label4
             // 

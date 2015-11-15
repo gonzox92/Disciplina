@@ -36,6 +36,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnModificar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.dataCuentas = new System.Windows.Forms.DataGridView();
@@ -108,6 +109,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnModificar);
             this.groupBox1.Controls.Add(this.btnEliminar);
             this.groupBox1.Controls.Add(this.btnRegistrar);
             this.groupBox1.Controls.Add(this.dataCuentas);
@@ -119,11 +121,24 @@
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             // 
+            // btnModificar
+            // 
+            this.btnModificar.Image = ((System.Drawing.Image)(resources.GetObject("btnModificar.Image")));
+            this.btnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnModificar.Location = new System.Drawing.Point(401, 450);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(124, 36);
+            this.btnModificar.TabIndex = 14;
+            this.btnModificar.Text = "Reset Passw";
+            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
+            // 
             // btnEliminar
             // 
             this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(468, 450);
+            this.btnEliminar.Location = new System.Drawing.Point(539, 450);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(124, 36);
@@ -136,7 +151,7 @@
             // 
             this.btnRegistrar.Image = ((System.Drawing.Image)(resources.GetObject("btnRegistrar.Image")));
             this.btnRegistrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRegistrar.Location = new System.Drawing.Point(354, 450);
+            this.btnRegistrar.Location = new System.Drawing.Point(273, 450);
             this.btnRegistrar.Margin = new System.Windows.Forms.Padding(2);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(110, 36);
@@ -208,7 +223,9 @@
             "",
             "Encargado de disciplina",
             "Jefe de Personal",
-            "Secretaria"});
+            "Secretaria",
+            "Oficial",
+            "estudiante"});
             this.txtPrivilegio.Location = new System.Drawing.Point(550, 22);
             this.txtPrivilegio.Name = "txtPrivilegio";
             this.txtPrivilegio.Size = new System.Drawing.Size(189, 21);
@@ -309,5 +326,6 @@
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.Button btnModificar;
     }
 }

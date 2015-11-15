@@ -81,5 +81,30 @@ namespace Disciplina.Vistas.Comunes
         {
             this.filterCuentas();
         }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            if (this.dataCuentas.SelectedRows.Count == 0)
+            {
+                return;
+            }
+
+            if (MessageBox.Show("Resetear contraseña?", "Reset", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                string idCuenta = this.dataCuentas.SelectedRows[0].Cells[0].Value.ToString();
+                string user = this.dataCuentas.SelectedRows[0].Cells[4].Value.ToString();
+
+                string tabla = "usuarios";
+                Dictionary<string, string[]> datos = new Dictionary<string, string[]>();
+                datos.Add("password", new string[] { "=", string.Format("'{0}'", Modelos.Utilidades.encriptarPassword(user)), "" });
+                Dictionary<string, string[]> llaves = new Dictionary<string, string[]>();
+                llaves.Add("ID", new string[] { "=", idCuenta, "" });
+
+                if (controller.actualizar(tabla, datos, llaves))
+                {
+                    MessageBox.Show("Contraseña reseteada");
+                }
+            }
+        }
     }
 }

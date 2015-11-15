@@ -37,7 +37,7 @@ namespace Disciplina.Vistas.Estudiantes
         {
             this.controller.registrar();
             this.dataEstudiantes.Columns.Clear();
-            this.dataEstudiantes.DataSource = this.controller.getEstudiantes();
+            this.filterEstudiante();
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -53,7 +53,7 @@ namespace Disciplina.Vistas.Estudiantes
                     this.controller.eliminar(row.Cells[0].Value.ToString());
                 }
 
-                this.dataEstudiantes.DataSource = this.controller.getEstudiantes();
+                this.filterEstudiante();
             }
         }
 
@@ -68,7 +68,7 @@ namespace Disciplina.Vistas.Estudiantes
 
             this.controller.actualizar(idEstudiante);
 
-            this.dataEstudiantes.DataSource = this.controller.getEstudiantes();
+            this.filterEstudiante();
         }
 
         private void filterEstudiante()
@@ -77,8 +77,25 @@ namespace Disciplina.Vistas.Estudiantes
             string ci = this.txtCI.Text;
             string nombre = this.txtNombre.Text;
             string carrera = this.txtCarrera.Text;
+            string year = this.txtYear.Value.ToString();
+            string periodo = this.txtPeriodo.Text == "" ? "%" : this.txtPeriodo.Text;
+            string paralelo = this.txtParalelo.Text;
+            string curso = this.txtCurso.Text;
 
-            this.dataEstudiantes.DataSource = this.controller.filterEstudiantes(codigo, ci, nombre, carrera);
+            this.dataEstudiantes.DataSource =
+                this.controller.filterEstudiantes(codigo, ci, nombre, carrera, year, periodo, paralelo, curso);
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            this.txtCodigo.Text = "";
+            this.txtCI.Text = "";
+            this.txtNombre.Text = "";
+            this.txtCarrera.Text = "";
+            this.txtYear.Value = DateTime.Now.Year;
+            this.txtPeriodo.Text = "";
+            this.txtParalelo.Text = "";
+            this.txtCurso.Text = "";
         }
 
         private void txtCodigo_TextChanged(object sender, EventArgs e)
@@ -97,6 +114,26 @@ namespace Disciplina.Vistas.Estudiantes
         }
 
         private void txtCarrera_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this.filterEstudiante();
+        }
+
+        private void txtYear_ValueChanged(object sender, EventArgs e)
+        {
+            this.filterEstudiante();
+        }
+
+        private void txtPeriodo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this.filterEstudiante();
+        }
+
+        private void txtParalelo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this.filterEstudiante();
+        }
+
+        private void txtCurso_SelectedIndexChanged(object sender, EventArgs e)
         {
             this.filterEstudiante();
         }
