@@ -98,8 +98,8 @@ namespace Disciplina.Modelos.Consultas
             }
             catch (SqlException e)
             {
-                //MessageBox.Show("Error en la consulta");
-                MessageBox.Show(string.Format("SELECT {0} FROM {1} WHERE {2}", columnas, tablas, valores));
+                MessageBox.Show("Error en la consulta");
+                //MessageBox.Show(string.Format("SELECT {0} FROM {1} WHERE {2}", columnas, tablas, valores));
                 return null;
             }
         }
@@ -120,9 +120,9 @@ namespace Disciplina.Modelos.Consultas
             }
             catch (SqlException e)
             {
-                //MessageBox.Show("Error en la consulta");
+                MessageBox.Show("Error en la consulta");
                 //MessageBox.Show(string.Format("SELECT {0} FROM {1} WHERE {2}", columnas, tablas, valores));
-                MessageBox.Show(e.ToString());
+                //MessageBox.Show(e.ToString());
                 return null;
             }
         }
@@ -159,9 +159,9 @@ namespace Disciplina.Modelos.Consultas
             }
             catch (SqlException e)
             {
-                //MessageBox.Show("Error al actualizar");
+                MessageBox.Show("Error al actualizar");
                 //MessageBox.Show(e.ToString());
-                MessageBox.Show(string.Format("UPDATE {0} SET {1} WHERE {2}", tabla, valores, condicionales));
+                //MessageBox.Show(string.Format("UPDATE {0} SET {1} WHERE {2}", tabla, valores, condicionales));
                 return false;
             }
         }

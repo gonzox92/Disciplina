@@ -38,6 +38,7 @@ namespace Disciplina.Controladores
         public DataTable filterEstudiantes(string codigo, string ci, string nombre, string carrera,
             string year, string periodo, string paralelo, string curso)
         {
+            //MessageBox.Show(string.Format("{0} {1} {2} {3}", year, periodo, paralelo, curso));
             string[] columnas = { 
                 "E.ID as ID", 
                 "E.codigo AS Codigo",
@@ -47,20 +48,34 @@ namespace Disciplina.Controladores
                 "E.apellidoMaterno AS Materno",
                 "C.nombre as Carrera"
             };
-            string[] tablas = { "estudiantes AS E", "carreras AS C", "cursos AS CR", "cursoEstudiantes AS CE" };
+            string[] tablas = new string[0];
             Dictionary<string, string[]> filtro = new Dictionary<string, string[]>();
-            filtro.Add("E.carrera", new string[] { "=", "C.ID", "AND" });
-            filtro.Add("CR.ID", new string[] { "=", "CE.IDCurso", "AND" });
-            filtro.Add("CR.IDCarrera", new string[] { "=", "C.ID", "AND" });
-            filtro.Add("E.codigo", new string[] { " LIKE", string.Format("'%{0}%'", codigo), "AND" });
-            filtro.Add("E.ci", new string[] { " LIKE", string.Format("'%{0}%'", ci), "AND" });
-            filtro.Add("(E.nombre + ' ' + E.apellidoPaterno + ' ' + E.apellidoMaterno)", new string[] { " LIKE", string.Format("'%{0}%'", nombre), "AND" });
-            filtro.Add("C.nombre", new string[] { " LIKE", string.Format("'%{0}%'", carrera), "AND" });
-            filtro.Add("CR.year", new string[] { "=", year, "AND" });
-            filtro.Add("CR.periodo", new string[] { " LIKE", string.Format("'{0}'", periodo), "AND" });
-            filtro.Add("CR.paralelo", new string[] { " LIKE", string.Format("'%{0}%'", paralelo), "AND" });
-            filtro.Add("CR.curso", new string[] { " LIKE", string.Format("'%{0}%'", curso), "" });
-
+            if (paralelo == "" && curso == "")
+            {
+                tablas = new string[]{"estudiantes AS E", "carreras AS C"};
+                filtro.Add("E.carrera", new string[] { "=", "C.ID", "AND" });
+                filtro.Add("E.codigo", new string[] { " LIKE", string.Format("'%{0}%'", codigo), "AND" });
+                filtro.Add("E.ci", new string[] { " LIKE", string.Format("'%{0}%'", ci), "AND" });
+                filtro.Add("(E.nombre + ' ' + E.apellidoPaterno + ' ' + E.apellidoMaterno)", new string[] { " LIKE", string.Format("'%{0}%'", nombre), "AND" });
+                filtro.Add("C.nombre", new string[] { " LIKE", string.Format("'%{0}%'", carrera), "" });
+            }
+            else
+            {
+                tablas = new string[] { "estudiantes AS E", "carreras AS C", "cursos AS CR", "cursoEstudiantes AS CE" };
+                filtro.Add("E.ID", new string[] { "=", "CE.IDEstudiante", "AND" });
+                filtro.Add("CR.ID", new string[] { "=", "CE.IDCurso", "AND" });
+                filtro.Add("CR.IDCarrera", new string[] { "=", "C.ID", "AND" });
+                
+                filtro.Add("E.codigo", new string[] { " LIKE", string.Format("'%{0}%'", codigo), "AND" });
+                filtro.Add("E.ci", new string[] { " LIKE", string.Format("'%{0}%'", ci), "AND" });
+                filtro.Add("(E.nombre + ' ' + E.apellidoPaterno + ' ' + E.apellidoMaterno)", new string[] { " LIKE", string.Format("'%{0}%'", nombre), "AND" });
+                filtro.Add("C.nombre", new string[] { " LIKE", string.Format("'%{0}%'", carrera), "AND" });
+                
+                filtro.Add("CR.year", new string[] { "=", year, "AND" });
+                filtro.Add("CR.periodo", new string[] { " LIKE", string.Format("'{0}'", periodo), "AND" });
+                filtro.Add("CR.paralelo", new string[] { " LIKE", string.Format("'%{0}%'", paralelo), "AND" });
+                filtro.Add("CR.curso", new string[] { " LIKE", string.Format("'%{0}%'", curso), "" });
+            }
             return Modelos.Consultas.Server.selectDistinct(columnas, tablas, filtro);
         }
 

@@ -43,6 +43,11 @@ namespace Disciplina.Vistas.Reportes
                 return;
             }
 
+            if (this.cursos.Count == 0)
+            {
+                return;
+            }
+
             DataTable faltas = this.faltasEstudiante.getFaltasEstudiante(
                 this.datos["ID"], ((KeyValuePair<string, string>)this.txtCursos.SelectedItem).Key);
             this.tableFaltas.DataSource = faltas;
